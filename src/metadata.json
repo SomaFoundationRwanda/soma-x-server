@@ -1,0 +1,2412 @@
+[
+  {
+    "type": "folder",
+    "path": "nursery-school-content",
+    "name": "Nursery school content",
+    "children": [
+      {
+        "type": "folder",
+        "path": "nursery-school-content/baby-class",
+        "name": "Baby class",
+        "children": [
+          {
+            "type": "folder",
+            "path": "nursery-school-content/baby-class/audio",
+            "name": "Audio",
+            "children": [
+              {
+                "type": "file",
+                "name": "Days Gone Quiet by Lewis Capaldi.mp3",
+                "path": "nursery-school-content/baby-class/audio/Days Gone Quiet by Lewis Capaldi.mp3",
+                "size": 4070553
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "nursery-school-content/baby-class/book",
+            "name": "Book",
+            "children": [
+              {
+                "type": "file",
+                "name": "Emily Henry   Book Lovers (2022, Penguin Publishing Group)   libgen.li.pdf",
+                "path": "nursery-school-content/baby-class/book/Emily Henry - Book Lovers (2022, Penguin Publishing Group) - libgen.li.pdf",
+                "size": 3483726
+              },
+              {
+                "type": "file",
+                "name": "FB MENU EAST GATE HOTEL MARCHY25 OK.pdf",
+                "path": "nursery-school-content/baby-class/book/FB MENU-EAST GATE HOTEL MARCHY25 OK.pdf",
+                "size": 1087656
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "nursery-school-content/baby-class/video",
+            "name": "Video",
+            "children": [
+              {
+                "type": "file",
+                "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                "path": "nursery-school-content/baby-class/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                "size": 6036600
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "nursery-school-content/middle-class",
+        "name": "Middle class",
+        "children": [
+          {
+            "type": "folder",
+            "path": "nursery-school-content/middle-class/audio",
+            "name": "Audio",
+            "children": [
+              {
+                "type": "file",
+                "name": "Days Gone Quiet by Lewis Capaldi.mp3",
+                "path": "nursery-school-content/middle-class/audio/Days Gone Quiet by Lewis Capaldi.mp3",
+                "size": 4070553
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "nursery-school-content/middle-class/book",
+            "name": "Book",
+            "children": [
+              {
+                "type": "file",
+                "name": "College Sales_ A Student Focused Marketplace Web Project.pdf",
+                "path": "nursery-school-content/middle-class/book/College Sales_ A Student-Focused Marketplace Web Project.pdf",
+                "size": 101370
+              },
+              {
+                "type": "file",
+                "name": "Contract_Template.pdf",
+                "path": "nursery-school-content/middle-class/book/Contract_Template.pdf",
+                "size": 138244
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "nursery-school-content/middle-class/video",
+            "name": "Video",
+            "children": [
+              {
+                "type": "file",
+                "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                "path": "nursery-school-content/middle-class/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                "size": 6036600
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "nursery-school-content/top-class",
+        "name": "Top class",
+        "children": [
+          {
+            "type": "folder",
+            "path": "nursery-school-content/top-class/audio",
+            "name": "Audio",
+            "children": [
+              {
+                "type": "file",
+                "name": "Days Gone Quiet by Lewis Capaldi.mp3",
+                "path": "nursery-school-content/top-class/audio/Days Gone Quiet by Lewis Capaldi.mp3",
+                "size": 4070553
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "nursery-school-content/top-class/book",
+            "name": "Book",
+            "children": [
+              {
+                "type": "file",
+                "name": "Emily Henry   Book Lovers (2022, Penguin Publishing Group)   libgen.li.pdf",
+                "path": "nursery-school-content/top-class/book/Emily Henry - Book Lovers (2022, Penguin Publishing Group) - libgen.li.pdf",
+                "size": 3483726
+              },
+              {
+                "type": "file",
+                "name": "KeyLab Essential FL Studio User Guide V1 (3).pdf",
+                "path": "nursery-school-content/top-class/book/KeyLab Essential FL Studio User Guide V1 (3).pdf",
+                "size": 3710032
+              },
+              {
+                "type": "file",
+                "name": "Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
+                "path": "nursery-school-content/top-class/book/Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
+                "size": 6214464
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "nursery-school-content/top-class/video",
+            "name": "Video",
+            "children": [
+              {
+                "type": "file",
+                "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                "path": "nursery-school-content/top-class/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                "size": 6036600
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "path": "primary-school-content",
+    "name": "Primary school content",
+    "children": [
+      {
+        "type": "folder",
+        "path": "primary-school-content/p1",
+        "name": "P1",
+        "children": [
+          {
+            "type": "folder",
+            "path": "primary-school-content/p1/english",
+            "name": "English",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p1/english/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p1/english/book",
+                "name": "Book",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "KeyLab Essential FL Studio User Guide V1 (3).pdf",
+                    "path": "primary-school-content/p1/english/book/KeyLab Essential FL Studio User Guide V1 (3).pdf",
+                    "size": 3710032
+                  },
+                  {
+                    "type": "file",
+                    "name": "Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
+                    "path": "primary-school-content/p1/english/book/Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
+                    "size": 6214464
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p1/english/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "primary-school-content/p1/english/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p1/history",
+            "name": "History",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p1/history/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p1/history/book",
+                "name": "Book",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "KeyLab Essential FL Studio User Guide V1 (3).pdf",
+                    "path": "primary-school-content/p1/history/book/KeyLab Essential FL Studio User Guide V1 (3).pdf",
+                    "size": 3710032
+                  },
+                  {
+                    "type": "file",
+                    "name": "Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
+                    "path": "primary-school-content/p1/history/book/Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
+                    "size": 6214464
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p1/history/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "primary-school-content/p1/history/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p1/mathematics",
+            "name": "Mathematics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p1/mathematics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p1/mathematics/book",
+                "name": "Book",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "KeyLab Essential FL Studio User Guide V1 (3).pdf",
+                    "path": "primary-school-content/p1/mathematics/book/KeyLab Essential FL Studio User Guide V1 (3).pdf",
+                    "size": 3710032
+                  },
+                  {
+                    "type": "file",
+                    "name": "Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
+                    "path": "primary-school-content/p1/mathematics/book/Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
+                    "size": 6214464
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p1/mathematics/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "primary-school-content/p1/mathematics/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p1/science",
+            "name": "Science",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p1/science/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p1/science/book",
+                "name": "Book",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "KeyLab Essential FL Studio User Guide V1 (3).pdf",
+                    "path": "primary-school-content/p1/science/book/KeyLab Essential FL Studio User Guide V1 (3).pdf",
+                    "size": 3710032
+                  },
+                  {
+                    "type": "file",
+                    "name": "Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
+                    "path": "primary-school-content/p1/science/book/Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
+                    "size": 6214464
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p1/science/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "primary-school-content/p1/science/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "primary-school-content/p2",
+        "name": "P2",
+        "children": [
+          {
+            "type": "folder",
+            "path": "primary-school-content/p2/english",
+            "name": "English",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p2/english/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p2/english/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p2/english/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "path": "primary-school-content/p2/english/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "size": 721602
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p2/history",
+            "name": "History",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p2/history/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p2/history/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p2/history/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p2/mathematics",
+            "name": "Mathematics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p2/mathematics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p2/mathematics/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p2/mathematics/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p2/science",
+            "name": "Science",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p2/science/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p2/science/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p2/science/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "path": "primary-school-content/p2/science/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "size": 721602
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "primary-school-content/p3",
+        "name": "P3",
+        "children": [
+          {
+            "type": "folder",
+            "path": "primary-school-content/p3/english",
+            "name": "English",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p3/english/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p3/english/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p3/english/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "path": "primary-school-content/p3/english/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "size": 721602
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p3/history",
+            "name": "History",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p3/history/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p3/history/book",
+                "name": "Book",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "College Sales_ A Student Focused Marketplace Web Project.pdf",
+                    "path": "primary-school-content/p3/history/book/College Sales_ A Student-Focused Marketplace Web Project.pdf",
+                    "size": 101370
+                  },
+                  {
+                    "type": "file",
+                    "name": "Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
+                    "path": "primary-school-content/p3/history/book/Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
+                    "size": 6214464
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p3/history/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "primary-school-content/p3/history/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  },
+                  {
+                    "type": "file",
+                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "path": "primary-school-content/p3/history/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "size": 721602
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p3/mathematics",
+            "name": "Mathematics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p3/mathematics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p3/mathematics/book",
+                "name": "Book",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Emily Henry   Book Lovers (2022, Penguin Publishing Group)   libgen.li.pdf",
+                    "path": "primary-school-content/p3/mathematics/book/Emily Henry - Book Lovers (2022, Penguin Publishing Group) - libgen.li.pdf",
+                    "size": 3483726
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p3/mathematics/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p3/science",
+            "name": "Science",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p3/science/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p3/science/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p3/science/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "primary-school-content/p4",
+        "name": "P4",
+        "children": [
+          {
+            "type": "folder",
+            "path": "primary-school-content/p4/english",
+            "name": "English",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p4/english/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p4/english/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p4/english/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p4/history",
+            "name": "History",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p4/history/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p4/history/book",
+                "name": "Book",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Emily Henry   Book Lovers (2022, Penguin Publishing Group)   libgen.li.pdf",
+                    "path": "primary-school-content/p4/history/book/Emily Henry - Book Lovers (2022, Penguin Publishing Group) - libgen.li.pdf",
+                    "size": 3483726
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p4/history/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p4/mathematics",
+            "name": "Mathematics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p4/mathematics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p4/mathematics/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p4/mathematics/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "path": "primary-school-content/p4/mathematics/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "size": 721602
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p4/science",
+            "name": "Science",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p4/science/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p4/science/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p4/science/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "primary-school-content/p4/science/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  },
+                  {
+                    "type": "file",
+                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "path": "primary-school-content/p4/science/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "size": 721602
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "primary-school-content/p5",
+        "name": "P5",
+        "children": [
+          {
+            "type": "folder",
+            "path": "primary-school-content/p5/english",
+            "name": "English",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p5/english/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p5/english/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p5/english/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "primary-school-content/p5/english/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  },
+                  {
+                    "type": "file",
+                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "path": "primary-school-content/p5/english/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "size": 721602
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p5/history",
+            "name": "History",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p5/history/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p5/history/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p5/history/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "primary-school-content/p5/history/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  },
+                  {
+                    "type": "file",
+                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "path": "primary-school-content/p5/history/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
+                    "size": 721602
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p5/mathematics",
+            "name": "Mathematics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p5/mathematics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p5/mathematics/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p5/mathematics/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "primary-school-content/p5/mathematics/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p5/science",
+            "name": "Science",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p5/science/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p5/science/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p5/science/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "primary-school-content/p5/science/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "primary-school-content/p6",
+        "name": "P6",
+        "children": [
+          {
+            "type": "folder",
+            "path": "primary-school-content/p6/english",
+            "name": "English",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p6/english/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p6/english/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p6/english/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "primary-school-content/p6/english/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p6/history",
+            "name": "History",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p6/history/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p6/history/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p6/history/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "primary-school-content/p6/history/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p6/mathematics",
+            "name": "Mathematics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p6/mathematics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p6/mathematics/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p6/mathematics/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "primary-school-content/p6/mathematics/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "primary-school-content/p6/science",
+            "name": "Science",
+            "children": [
+              {
+                "type": "folder",
+                "path": "primary-school-content/p6/science/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p6/science/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "primary-school-content/p6/science/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "primary-school-content/p6/science/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "path": "secondary-school-content",
+    "name": "Secondary school content",
+    "children": [
+      {
+        "type": "folder",
+        "path": "secondary-school-content/s1",
+        "name": "S1",
+        "children": [
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s1/biology",
+            "name": "Biology",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/biology/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/biology/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/biology/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s1/chemistry",
+            "name": "Chemistry",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/chemistry/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/chemistry/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/chemistry/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s1/english",
+            "name": "English",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/english/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/english/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/english/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s1/history",
+            "name": "History",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/history/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/history/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/history/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s1/mathematics",
+            "name": "Mathematics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/mathematics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/mathematics/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/mathematics/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s1/physics",
+            "name": "Physics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/physics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/physics/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s1/physics/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "secondary-school-content/s2",
+        "name": "S2",
+        "children": [
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s2/biology",
+            "name": "Biology",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/biology/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/biology/book",
+                "name": "Book",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "College Sales_ A Student Focused Marketplace Web Project.pdf",
+                    "path": "secondary-school-content/s2/biology/book/College Sales_ A Student-Focused Marketplace Web Project.pdf",
+                    "size": 101370
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/biology/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s2/chemistry",
+            "name": "Chemistry",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/chemistry/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/chemistry/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/chemistry/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s2/english",
+            "name": "English",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/english/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/english/book",
+                "name": "Book",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "College Sales_ A Student Focused Marketplace Web Project.pdf",
+                    "path": "secondary-school-content/s2/english/book/College Sales_ A Student-Focused Marketplace Web Project.pdf",
+                    "size": 101370
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/english/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s2/history",
+            "name": "History",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/history/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/history/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/history/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s2/mathematics",
+            "name": "Mathematics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/mathematics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/mathematics/book",
+                "name": "Book",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "College Sales_ A Student Focused Marketplace Web Project.pdf",
+                    "path": "secondary-school-content/s2/mathematics/book/College Sales_ A Student-Focused Marketplace Web Project.pdf",
+                    "size": 101370
+                  },
+                  {
+                    "type": "file",
+                    "name": "Emily Henry   Book Lovers (2022, Penguin Publishing Group)   libgen.li.pdf",
+                    "path": "secondary-school-content/s2/mathematics/book/Emily Henry - Book Lovers (2022, Penguin Publishing Group) - libgen.li.pdf",
+                    "size": 3483726
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/mathematics/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s2/physics",
+            "name": "Physics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/physics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/physics/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s2/physics/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "secondary-school-content/s3",
+        "name": "S3",
+        "children": [
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s3/biology",
+            "name": "Biology",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/biology/audio",
+                "name": "Audio",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Days Gone Quiet by Lewis Capaldi.mp3",
+                    "path": "secondary-school-content/s3/biology/audio/Days Gone Quiet by Lewis Capaldi.mp3",
+                    "size": 4070553
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/biology/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/biology/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s3/chemistry",
+            "name": "Chemistry",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/chemistry/audio",
+                "name": "Audio",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Yt1s.com   James Arthur  Celebrate Official Video.mp3",
+                    "path": "secondary-school-content/s3/chemistry/audio/yt1s.com - James Arthur  Celebrate Official Video.mp3",
+                    "size": 3545684
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/chemistry/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/chemistry/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s3/english",
+            "name": "English",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/english/audio",
+                "name": "Audio",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Yt1s.com   James Arthur  Celebrate Official Video.mp3",
+                    "path": "secondary-school-content/s3/english/audio/yt1s.com - James Arthur  Celebrate Official Video.mp3",
+                    "size": 3545684
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/english/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/english/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s3/history",
+            "name": "History",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/history/audio",
+                "name": "Audio",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Days Gone Quiet by Lewis Capaldi.mp3",
+                    "path": "secondary-school-content/s3/history/audio/Days Gone Quiet by Lewis Capaldi.mp3",
+                    "size": 4070553
+                  },
+                  {
+                    "type": "file",
+                    "name": "Yt1s.com   James Arthur  Celebrate Official Video.mp3",
+                    "path": "secondary-school-content/s3/history/audio/yt1s.com - James Arthur  Celebrate Official Video.mp3",
+                    "size": 3545684
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/history/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/history/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s3/mathematics",
+            "name": "Mathematics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/mathematics/audio",
+                "name": "Audio",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Yt1s.com   James Arthur  Celebrate Official Video.mp3",
+                    "path": "secondary-school-content/s3/mathematics/audio/yt1s.com - James Arthur  Celebrate Official Video.mp3",
+                    "size": 3545684
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/mathematics/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/mathematics/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s3/physics",
+            "name": "Physics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/physics/audio",
+                "name": "Audio",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Yt1s.com   James Arthur  Celebrate Official Video.mp3",
+                    "path": "secondary-school-content/s3/physics/audio/yt1s.com - James Arthur  Celebrate Official Video.mp3",
+                    "size": 3545684
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/physics/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s3/physics/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "secondary-school-content/s4",
+        "name": "S4",
+        "children": [
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s4/biology",
+            "name": "Biology",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/biology/audio",
+                "name": "Audio",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Videoplayback (mp3cut.net).mp3",
+                    "path": "secondary-school-content/s4/biology/audio/videoplayback (mp3cut.net).mp3",
+                    "size": 1161542
+                  },
+                  {
+                    "type": "file",
+                    "name": "Yt1s.com   James Arthur  Celebrate Official Video.mp3",
+                    "path": "secondary-school-content/s4/biology/audio/yt1s.com - James Arthur  Celebrate Official Video.mp3",
+                    "size": 3545684
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/biology/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/biology/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s4/chemistry",
+            "name": "Chemistry",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/chemistry/audio",
+                "name": "Audio",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Videoplayback (mp3cut.net).mp3",
+                    "path": "secondary-school-content/s4/chemistry/audio/videoplayback (mp3cut.net).mp3",
+                    "size": 1161542
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/chemistry/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/chemistry/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s4/english",
+            "name": "English",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/english/audio",
+                "name": "Audio",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Videoplayback (mp3cut.net).mp3",
+                    "path": "secondary-school-content/s4/english/audio/videoplayback (mp3cut.net).mp3",
+                    "size": 1161542
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/english/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/english/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s4/history",
+            "name": "History",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/history/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/history/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/history/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "secondary-school-content/s4/history/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s4/mathematics",
+            "name": "Mathematics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/mathematics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/mathematics/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/mathematics/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "secondary-school-content/s4/mathematics/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s4/physics",
+            "name": "Physics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/physics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/physics/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s4/physics/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "secondary-school-content/s4/physics/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "secondary-school-content/s5",
+        "name": "S5",
+        "children": [
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s5/biology",
+            "name": "Biology",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/biology/audio",
+                "name": "Audio",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Days Gone Quiet by Lewis Capaldi.mp3",
+                    "path": "secondary-school-content/s5/biology/audio/Days Gone Quiet by Lewis Capaldi.mp3",
+                    "size": 4070553
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/biology/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/biology/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s5/chemistry",
+            "name": "Chemistry",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/chemistry/audio",
+                "name": "Audio",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Videoplayback (mp3cut.net).mp3",
+                    "path": "secondary-school-content/s5/chemistry/audio/videoplayback (mp3cut.net).mp3",
+                    "size": 1161542
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/chemistry/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/chemistry/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s5/english",
+            "name": "English",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/english/audio",
+                "name": "Audio",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Videoplayback (mp3cut.net).mp3",
+                    "path": "secondary-school-content/s5/english/audio/videoplayback (mp3cut.net).mp3",
+                    "size": 1161542
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/english/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/english/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s5/history",
+            "name": "History",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/history/audio",
+                "name": "Audio",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Days Gone Quiet by Lewis Capaldi.mp3",
+                    "path": "secondary-school-content/s5/history/audio/Days Gone Quiet by Lewis Capaldi.mp3",
+                    "size": 4070553
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/history/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/history/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s5/mathematics",
+            "name": "Mathematics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/mathematics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/mathematics/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/mathematics/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "secondary-school-content/s5/mathematics/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s5/physics",
+            "name": "Physics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/physics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/physics/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s5/physics/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "secondary-school-content/s6",
+        "name": "S6",
+        "children": [
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s6/biology",
+            "name": "Biology",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/biology/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/biology/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/biology/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "secondary-school-content/s6/biology/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s6/chemistry",
+            "name": "Chemistry",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/chemistry/audio",
+                "name": "Audio",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Days Gone Quiet by Lewis Capaldi.mp3",
+                    "path": "secondary-school-content/s6/chemistry/audio/Days Gone Quiet by Lewis Capaldi.mp3",
+                    "size": 4070553
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/chemistry/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/chemistry/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s6/english",
+            "name": "English",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/english/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/english/book",
+                "name": "Book",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Contract_Template.pdf",
+                    "path": "secondary-school-content/s6/english/book/Contract_Template.pdf",
+                    "size": 138244
+                  },
+                  {
+                    "type": "file",
+                    "name": "Emily Henry   Book Lovers (2022, Penguin Publishing Group)   libgen.li.pdf",
+                    "path": "secondary-school-content/s6/english/book/Emily Henry - Book Lovers (2022, Penguin Publishing Group) - libgen.li.pdf",
+                    "size": 3483726
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/english/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s6/history",
+            "name": "History",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/history/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/history/book",
+                "name": "Book",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Contract_Template.pdf",
+                    "path": "secondary-school-content/s6/history/book/Contract_Template.pdf",
+                    "size": 138244
+                  },
+                  {
+                    "type": "file",
+                    "name": "Emily Henry   Book Lovers (2022, Penguin Publishing Group)   libgen.li.pdf",
+                    "path": "secondary-school-content/s6/history/book/Emily Henry - Book Lovers (2022, Penguin Publishing Group) - libgen.li.pdf",
+                    "size": 3483726
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/history/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s6/mathematics",
+            "name": "Mathematics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/mathematics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/mathematics/book",
+                "name": "Book",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/mathematics/video",
+                "name": "Video",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "path": "secondary-school-content/s6/mathematics/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                    "size": 6036600
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s6/physics",
+            "name": "Physics",
+            "children": [
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/physics/audio",
+                "name": "Audio",
+                "children": []
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/physics/book",
+                "name": "Book",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Contract_Template.pdf",
+                    "path": "secondary-school-content/s6/physics/book/Contract_Template.pdf",
+                    "size": 138244
+                  }
+                ]
+              },
+              {
+                "type": "folder",
+                "path": "secondary-school-content/s6/physics/video",
+                "name": "Video",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "path": "university-content",
+    "name": "University content",
+    "children": [
+      {
+        "type": "folder",
+        "path": "university-content/biomedical sciences",
+        "name": "Biomedical sciences",
+        "children": [
+          {
+            "type": "folder",
+            "path": "university-content/biomedical sciences/audio",
+            "name": "Audio",
+            "children": []
+          },
+          {
+            "type": "folder",
+            "path": "university-content/biomedical sciences/book",
+            "name": "Book",
+            "children": [
+              {
+                "type": "file",
+                "name": "Contract_Template.pdf",
+                "path": "university-content/biomedical sciences/book/Contract_Template.pdf",
+                "size": 138244
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "university-content/biomedical sciences/video",
+            "name": "Video",
+            "children": [
+              {
+                "type": "file",
+                "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                "path": "university-content/biomedical sciences/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                "size": 6036600
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "university-content/computer science",
+        "name": "Computer science",
+        "children": [
+          {
+            "type": "folder",
+            "path": "university-content/computer science/audio",
+            "name": "Audio",
+            "children": []
+          },
+          {
+            "type": "folder",
+            "path": "university-content/computer science/book",
+            "name": "Book",
+            "children": []
+          },
+          {
+            "type": "folder",
+            "path": "university-content/computer science/video",
+            "name": "Video",
+            "children": [
+              {
+                "type": "file",
+                "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                "path": "university-content/computer science/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                "size": 6036600
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "university-content/engineering",
+        "name": "Engineering",
+        "children": [
+          {
+            "type": "folder",
+            "path": "university-content/engineering/audio",
+            "name": "Audio",
+            "children": [
+              {
+                "type": "file",
+                "name": "Days Gone Quiet by Lewis Capaldi.mp3",
+                "path": "university-content/engineering/audio/Days Gone Quiet by Lewis Capaldi.mp3",
+                "size": 4070553
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "university-content/engineering/book",
+            "name": "Book",
+            "children": [
+              {
+                "type": "file",
+                "name": "Emily Henry   Book Lovers (2022, Penguin Publishing Group)   libgen.li.pdf",
+                "path": "university-content/engineering/book/Emily Henry - Book Lovers (2022, Penguin Publishing Group) - libgen.li.pdf",
+                "size": 3483726
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "university-content/engineering/video",
+            "name": "Video",
+            "children": [
+              {
+                "type": "file",
+                "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                "path": "university-content/engineering/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                "size": 6036600
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "university-content/law",
+        "name": "Law",
+        "children": [
+          {
+            "type": "folder",
+            "path": "university-content/law/audio",
+            "name": "Audio",
+            "children": [
+              {
+                "type": "file",
+                "name": "Days Gone Quiet by Lewis Capaldi.mp3",
+                "path": "university-content/law/audio/Days Gone Quiet by Lewis Capaldi.mp3",
+                "size": 4070553
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "university-content/law/book",
+            "name": "Book",
+            "children": []
+          },
+          {
+            "type": "folder",
+            "path": "university-content/law/video",
+            "name": "Video",
+            "children": [
+              {
+                "type": "file",
+                "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                "path": "university-content/law/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
+                "size": 6036600
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "path": "university-content/liberal arts",
+        "name": "Liberal arts",
+        "children": [
+          {
+            "type": "folder",
+            "path": "university-content/liberal arts/audio",
+            "name": "Audio",
+            "children": [
+              {
+                "type": "file",
+                "name": "Days Gone Quiet by Lewis Capaldi.mp3",
+                "path": "university-content/liberal arts/audio/Days Gone Quiet by Lewis Capaldi.mp3",
+                "size": 4070553
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "university-content/liberal arts/book",
+            "name": "Book",
+            "children": [
+              {
+                "type": "file",
+                "name": "Emily Henry   Book Lovers (2022, Penguin Publishing Group)   libgen.li.pdf",
+                "path": "university-content/liberal arts/book/Emily Henry - Book Lovers (2022, Penguin Publishing Group) - libgen.li.pdf",
+                "size": 3483726
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "path": "university-content/liberal arts/video",
+            "name": "Video",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]
