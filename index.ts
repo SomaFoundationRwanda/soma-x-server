@@ -10,7 +10,7 @@ const __dirname = dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 2999;
 
-const CONTENT_DIR = path.join(__dirname, '../content');
+const CONTENT_DIR = path.join(__dirname, '../content/curriculum/rwanda');
 const METADATA_FILE = path.join(__dirname, './src/metadata.json');
 
 // Requesting metadata when a SomaBox user is trying to check available content to sync from the server
