@@ -1,8 +1,12 @@
 // After adding new content, run this script to generate metadata
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+import path, { dirname } from 'path';
 
-const CONTENT_DIR = path.join(__dirname, '../../content');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const CONTENT_DIR = path.join(__dirname, '../../content/curriculum/rwanda');
 const OUTPUT_FILE = path.join(__dirname, 'metadata.json');
 
 function scanFolder(dir, base = '') {
@@ -12,6 +16,7 @@ function scanFolder(dir, base = '') {
     for (const entry of entries) {
         const fullPath = path.join(dir, entry.name);
         const relativePath = path.join(base, entry.name);
+        if (entry.name.startsWith('.')) continue;
 
         if (entry.isDirectory()) {
         result.push({
