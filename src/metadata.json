@@ -180,183 +180,89 @@
         "children": [
           {
             "type": "folder",
-            "path": "primary-school-content/p1/english",
-            "name": "English",
+            "path": "primary-school-content/p1/audio",
+            "name": "Audio",
             "children": [
               {
-                "type": "folder",
-                "path": "primary-school-content/p1/english/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "REB  P3  Mathematics  LessonIsomo_ Ingero Zifashishwa Mugupima Uburemere n'Isano iri Hagati yazo.mp3",
+                "path": "primary-school-content/p1/audio/REB  P3  Mathematics  LessonIsomo_ Ingero Zifashishwa Mugupima Uburemere n'Isano iri Hagati yazo.mp3",
+                "size": 25562938
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p1/english/book",
-                "name": "Book",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "KeyLab Essential FL Studio User Guide V1 (3).pdf",
-                    "path": "primary-school-content/p1/english/book/KeyLab Essential FL Studio User Guide V1 (3).pdf",
-                    "size": 3710032
-                  },
-                  {
-                    "type": "file",
-                    "name": "Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
-                    "path": "primary-school-content/p1/english/book/Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
-                    "size": 6214464
-                  }
-                ]
+                "type": "file",
+                "name": "REB  P3  Mathematics  LessonIsomo_ Ingero z'uburemere.mp3",
+                "path": "primary-school-content/p1/audio/REB  P3  Mathematics  LessonIsomo_ Ingero z'uburemere.mp3",
+                "size": 25562938
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p1/english/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "primary-school-content/p1/english/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  }
-                ]
+                "type": "file",
+                "name": "REB _ P3 _ Mathematics _ Lesson_Isomo_ Ingero Zifashishwa Mugupima Uburemere n'Isano iri Hagati yazo [16iCjj0LWaw].mp3",
+                "path": "primary-school-content/p1/audio/REB _ P3 _ Mathematics _ Lesson_Isomo_ Ingero Zifashishwa Mugupima Uburemere n'Isano iri Hagati yazo [16iCjj0LWaw].mp3",
+                "size": 8671922
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education BoardP3 IkinyarwandaISOMO_ Umunsi mukuru w'umuganuraDay12.mp3",
+                "path": "primary-school-content/p1/audio/Rwanda Education BoardP3 IkinyarwandaISOMO_ Umunsi mukuru w'umuganuraDay12.mp3",
+                "size": 30243036
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education Board_P3_Ikinyarwanda_ISOMO_ IBIHEKANE Myw na Nshyw_Day 7 [TKJEy 4SflA].mp3",
+                "path": "primary-school-content/p1/audio/Rwanda Education Board_P3_Ikinyarwanda_ISOMO_ IBIHEKANE Myw na Nshyw_Day 7 [TKJEy-4SflA].mp3",
+                "size": 12953170
               }
             ]
           },
           {
             "type": "folder",
-            "path": "primary-school-content/p1/history",
-            "name": "History",
+            "path": "primary-school-content/p1/book",
+            "name": "Book",
             "children": [
               {
-                "type": "folder",
-                "path": "primary-school-content/p1/history/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "P1 Mathematics PB.pdf",
+                "path": "primary-school-content/p1/book/P1 Mathematics PB.pdf",
+                "size": 39969149
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p1/history/book",
-                "name": "Book",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "KeyLab Essential FL Studio User Guide V1 (3).pdf",
-                    "path": "primary-school-content/p1/history/book/KeyLab Essential FL Studio User Guide V1 (3).pdf",
-                    "size": 3710032
-                  },
-                  {
-                    "type": "file",
-                    "name": "Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
-                    "path": "primary-school-content/p1/history/book/Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
-                    "size": 6214464
-                  }
-                ]
+                "type": "file",
+                "name": "P1 English PB.pdf",
+                "path": "primary-school-content/p1/book/P1-English-PB.pdf",
+                "size": 35843391
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p1/history/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "primary-school-content/p1/history/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  }
-                ]
+                "type": "file",
+                "name": "P1 French PB (1).pdf",
+                "path": "primary-school-content/p1/book/P1-French-PB (1).pdf",
+                "size": 41088755
+              },
+              {
+                "type": "file",
+                "name": "P1 Kinyarwanda PB.pdf",
+                "path": "primary-school-content/p1/book/P1-Kinyarwanda-PB.pdf",
+                "size": 46467849
+              },
+              {
+                "type": "file",
+                "name": "P1 SET PB.pdf",
+                "path": "primary-school-content/p1/book/P1-SET-PB.pdf",
+                "size": 12153325
+              },
+              {
+                "type": "file",
+                "name": "P1 SST PB.pdf",
+                "path": "primary-school-content/p1/book/P1-SST-PB.pdf",
+                "size": 31526281
               }
             ]
           },
           {
             "type": "folder",
-            "path": "primary-school-content/p1/mathematics",
-            "name": "Mathematics",
-            "children": [
-              {
-                "type": "folder",
-                "path": "primary-school-content/p1/mathematics/audio",
-                "name": "Audio",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p1/mathematics/book",
-                "name": "Book",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "KeyLab Essential FL Studio User Guide V1 (3).pdf",
-                    "path": "primary-school-content/p1/mathematics/book/KeyLab Essential FL Studio User Guide V1 (3).pdf",
-                    "size": 3710032
-                  },
-                  {
-                    "type": "file",
-                    "name": "Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
-                    "path": "primary-school-content/p1/mathematics/book/Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
-                    "size": 6214464
-                  }
-                ]
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p1/mathematics/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "primary-school-content/p1/mathematics/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "folder",
-            "path": "primary-school-content/p1/science",
-            "name": "Science",
-            "children": [
-              {
-                "type": "folder",
-                "path": "primary-school-content/p1/science/audio",
-                "name": "Audio",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p1/science/book",
-                "name": "Book",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "KeyLab Essential FL Studio User Guide V1 (3).pdf",
-                    "path": "primary-school-content/p1/science/book/KeyLab Essential FL Studio User Guide V1 (3).pdf",
-                    "size": 3710032
-                  },
-                  {
-                    "type": "file",
-                    "name": "Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
-                    "path": "primary-school-content/p1/science/book/Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
-                    "size": 6214464
-                  }
-                ]
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p1/science/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "primary-school-content/p1/science/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  }
-                ]
-              }
-            ]
+            "path": "primary-school-content/p1/video",
+            "name": "Video",
+            "children": []
           }
         ]
       },
@@ -367,117 +273,77 @@
         "children": [
           {
             "type": "folder",
-            "path": "primary-school-content/p2/english",
-            "name": "English",
+            "path": "primary-school-content/p2/audio",
+            "name": "Audio",
             "children": [
               {
-                "type": "folder",
-                "path": "primary-school-content/p2/english/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "REB  P3  Science and Elementary Technology  Unit 3_ Computer My Friend  Lesson 1_ An Xo Laptop.mp3",
+                "path": "primary-school-content/p2/audio/REB  P3  Science and Elementary Technology  Unit 3_ Computer My Friend  Lesson 1_ An Xo Laptop.mp3",
+                "size": 40863379
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p2/english/book",
-                "name": "Book",
-                "children": []
+                "type": "file",
+                "name": "REB _ P3 _ Science and Elementary Technology _ Unit 8_ Type of Energy _ Lesson 3_Heat Energy [rp1WCAEn420].mp3",
+                "path": "primary-school-content/p2/audio/REB _ P3 _ Science and Elementary Technology _ Unit 8_ Type of Energy _ Lesson 3_Heat Energy [rp1WCAEn420].mp3",
+                "size": 12138531
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p2/english/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "path": "primary-school-content/p2/english/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "size": 721602
-                  }
-                ]
+                "type": "file",
+                "name": "REB _ P3 _ Science and Elementary Technology _Unit7 _ Lesson1_ Joints of the Human Body [tNqYAm8dn00].mp3",
+                "path": "primary-school-content/p2/audio/REB _ P3 _ Science and Elementary Technology _Unit7 _ Lesson1_ Joints of the Human Body [tNqYAm8dn00].mp3",
+                "size": 11550465
               }
             ]
           },
           {
             "type": "folder",
-            "path": "primary-school-content/p2/history",
-            "name": "History",
+            "path": "primary-school-content/p2/book",
+            "name": "Book",
             "children": [
               {
-                "type": "folder",
-                "path": "primary-school-content/p2/history/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "P2 Mathematics PB.pdf",
+                "path": "primary-school-content/p2/book/P2 Mathematics PB.pdf",
+                "size": 30985317
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p2/history/book",
-                "name": "Book",
-                "children": []
+                "type": "file",
+                "name": "P2 English PB.pdf",
+                "path": "primary-school-content/p2/book/P2-English-PB.pdf",
+                "size": 26553608
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p2/history/video",
-                "name": "Video",
-                "children": []
+                "type": "file",
+                "name": "P2 French PB.pdf",
+                "path": "primary-school-content/p2/book/P2-French-PB.pdf",
+                "size": 42354478
+              },
+              {
+                "type": "file",
+                "name": "P2 Kinyarwanda PB.pdf",
+                "path": "primary-school-content/p2/book/P2-Kinyarwanda-PB.pdf",
+                "size": 55202055
+              },
+              {
+                "type": "file",
+                "name": "P2 SET PB.pdf",
+                "path": "primary-school-content/p2/book/P2-SET-PB.pdf",
+                "size": 14020540
+              },
+              {
+                "type": "file",
+                "name": "P2 SST PB.pdf",
+                "path": "primary-school-content/p2/book/P2-SST-PB.pdf",
+                "size": 26364188
               }
             ]
           },
           {
             "type": "folder",
-            "path": "primary-school-content/p2/mathematics",
-            "name": "Mathematics",
-            "children": [
-              {
-                "type": "folder",
-                "path": "primary-school-content/p2/mathematics/audio",
-                "name": "Audio",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p2/mathematics/book",
-                "name": "Book",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p2/mathematics/video",
-                "name": "Video",
-                "children": []
-              }
-            ]
-          },
-          {
-            "type": "folder",
-            "path": "primary-school-content/p2/science",
-            "name": "Science",
-            "children": [
-              {
-                "type": "folder",
-                "path": "primary-school-content/p2/science/audio",
-                "name": "Audio",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p2/science/book",
-                "name": "Book",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p2/science/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "path": "primary-school-content/p2/science/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "size": 721602
-                  }
-                ]
-              }
-            ]
+            "path": "primary-school-content/p2/video",
+            "name": "Video",
+            "children": []
           }
         ]
       },
@@ -488,141 +354,106 @@
         "children": [
           {
             "type": "folder",
-            "path": "primary-school-content/p3/english",
-            "name": "English",
+            "path": "primary-school-content/p3/audio",
+            "name": "Audio",
             "children": [
               {
-                "type": "folder",
-                "path": "primary-school-content/p3/english/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "Rwanda Education BoardMathsP 4 UNIT 6_ Length MeasurementsUNIT_ Length Measurements.mp3",
+                "path": "primary-school-content/p3/audio/Rwanda Education BoardMathsP 4 UNIT 6_ Length MeasurementsUNIT_ Length Measurements.mp3",
+                "size": 28802958
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p3/english/book",
-                "name": "Book",
-                "children": []
+                "type": "file",
+                "name": "Rwanda Education BoardP4 English UNIT 5. Jobs and Roles in Home and Communitylesson_ Jobs and Ro.mp3",
+                "path": "primary-school-content/p3/audio/Rwanda Education BoardP4 English UNIT 5. Jobs and Roles in Home and Communitylesson_ Jobs and Ro.mp3",
+                "size": 26523408
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p3/english/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "path": "primary-school-content/p3/english/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "size": 721602
-                  }
-                ]
+                "type": "file",
+                "name": "Rwanda Education BoardP4 EnglishUNIT 5. Jobs and Roles in Home and Community  lesson _Helping at.mp3",
+                "path": "primary-school-content/p3/audio/Rwanda Education BoardP4 EnglishUNIT 5. Jobs and Roles in Home and Community  lesson _Helping at.mp3",
+                "size": 26883271
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education BoardP4 Englishunit 4. Weather  lesson _ things that describe weather.mp3",
+                "path": "primary-school-content/p3/audio/Rwanda Education BoardP4 Englishunit 4. Weather  lesson _ things that describe weather.mp3",
+                "size": 25443193
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education Board_MATHS_P 4_Unit 6_ Length Measurements _LESSON_ ADDING LENGTH [a7XvjUd2UWo].mp3",
+                "path": "primary-school-content/p3/audio/Rwanda Education Board_MATHS_P 4_Unit 6_ Length Measurements _LESSON_ ADDING LENGTH [a7XvjUd2UWo].mp3",
+                "size": 7604208
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education BoardmathsP 4Unit 6_ Length MeasurementsLESSON_ Converting unit of length.mp3",
+                "path": "primary-school-content/p3/audio/Rwanda Education BoardmathsP 4Unit 6_ Length MeasurementsLESSON_ Converting unit of length.mp3",
+                "size": 21242703
               }
             ]
           },
           {
             "type": "folder",
-            "path": "primary-school-content/p3/history",
-            "name": "History",
+            "path": "primary-school-content/p3/book",
+            "name": "Book",
             "children": [
               {
-                "type": "folder",
-                "path": "primary-school-content/p3/history/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "P3 Mathematics PB.pdf",
+                "path": "primary-school-content/p3/book/P3 Mathematics PB.pdf",
+                "size": 16528996
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p3/history/book",
-                "name": "Book",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "College Sales_ A Student Focused Marketplace Web Project.pdf",
-                    "path": "primary-school-content/p3/history/book/College Sales_ A Student-Focused Marketplace Web Project.pdf",
-                    "size": 101370
-                  },
-                  {
-                    "type": "file",
-                    "name": "Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
-                    "path": "primary-school-content/p3/history/book/Rethinking Affordable Housing in Rwanda’s Rapidly Urbanizing Cities _ Responsible Enterprise Final Project _ 2025.pdf",
-                    "size": 6214464
-                  }
-                ]
+                "type": "file",
+                "name": "P3 English PB.pdf",
+                "path": "primary-school-content/p3/book/P3-English-PB.pdf",
+                "size": 63155005
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p3/history/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "primary-school-content/p3/history/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  },
-                  {
-                    "type": "file",
-                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "path": "primary-school-content/p3/history/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "size": 721602
-                  }
-                ]
+                "type": "file",
+                "name": "P3 French PB.pdf",
+                "path": "primary-school-content/p3/book/P3-French-PB.pdf",
+                "size": 29961021
+              },
+              {
+                "type": "file",
+                "name": "P3 Kinyarwanda PB.pdf",
+                "path": "primary-school-content/p3/book/P3-Kinyarwanda-PB.pdf",
+                "size": 49844533
+              },
+              {
+                "type": "file",
+                "name": "P3 SET PB.pdf",
+                "path": "primary-school-content/p3/book/P3-SET-PB.pdf",
+                "size": 13823844
+              },
+              {
+                "type": "file",
+                "name": "P3 SST PB.pdf",
+                "path": "primary-school-content/p3/book/P3-SST-PB.pdf",
+                "size": 37112668
               }
             ]
           },
           {
             "type": "folder",
-            "path": "primary-school-content/p3/mathematics",
-            "name": "Mathematics",
+            "path": "primary-school-content/p3/video",
+            "name": "Video",
             "children": [
               {
-                "type": "folder",
-                "path": "primary-school-content/p3/mathematics/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "REB  P3  Mathematics  Unit 8  Lesson_ Characteristics and Values.mp4",
+                "path": "primary-school-content/p3/video/REB  P3  Mathematics  Unit 8  Lesson_ Characteristics and Values.mp4",
+                "size": 100378314
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p3/mathematics/book",
-                "name": "Book",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Emily Henry   Book Lovers (2022, Penguin Publishing Group)   libgen.li.pdf",
-                    "path": "primary-school-content/p3/mathematics/book/Emily Henry - Book Lovers (2022, Penguin Publishing Group) - libgen.li.pdf",
-                    "size": 3483726
-                  }
-                ]
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p3/mathematics/video",
-                "name": "Video",
-                "children": []
-              }
-            ]
-          },
-          {
-            "type": "folder",
-            "path": "primary-school-content/p3/science",
-            "name": "Science",
-            "children": [
-              {
-                "type": "folder",
-                "path": "primary-school-content/p3/science/audio",
-                "name": "Audio",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p3/science/book",
-                "name": "Book",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p3/science/video",
-                "name": "Video",
-                "children": []
+                "type": "file",
+                "name": "REB  P3  Social Studies  Unit 7  Lesson1_ Importance of Environment in Our Sector.mp4",
+                "path": "primary-school-content/p3/video/REB  P3  Social Studies  Unit 7  Lesson1_ Importance of Environment in Our Sector.mp4",
+                "size": 86957592
               }
             ]
           }
@@ -635,128 +466,130 @@
         "children": [
           {
             "type": "folder",
-            "path": "primary-school-content/p4/english",
-            "name": "English",
+            "path": "primary-school-content/p4/audio",
+            "name": "Audio",
             "children": [
               {
-                "type": "folder",
-                "path": "primary-school-content/p4/english/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "Rwanda Education BoardIKINYARWANDAP4ISOMO_ UMWANDIKO_ UMURAGE W'ABAVANDIMWE BATATU.mp3",
+                "path": "primary-school-content/p4/audio/Rwanda Education BoardIKINYARWANDAP4ISOMO_ UMWANDIKO_ UMURAGE W'ABAVANDIMWE BATATU.mp3",
+                "size": 28683213
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p4/english/book",
-                "name": "Book",
-                "children": []
+                "type": "file",
+                "name": "Rwanda Education BoardKinyarwandaP4 ISOMO_ ITUMANAHO.mp3",
+                "path": "primary-school-content/p4/audio/Rwanda Education BoardKinyarwandaP4 ISOMO_ ITUMANAHO.mp3",
+                "size": 25083330
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p4/english/video",
-                "name": "Video",
-                "children": []
+                "type": "file",
+                "name": "Rwanda Education BoardKinyarwandaP4 ISOMO_ UBWIKOREZI NO GUTWARA ABANTU.mp3",
+                "path": "primary-school-content/p4/audio/Rwanda Education BoardKinyarwandaP4 ISOMO_ UBWIKOREZI NO GUTWARA ABANTU.mp3",
+                "size": 21722938
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education BoardP 4 SETUnit 11_ PlantsLESSON_ PARTS OF PLANT AND THEIR FUNCTIONS.mp3",
+                "path": "primary-school-content/p4/audio/Rwanda Education BoardP 4 SETUnit 11_ PlantsLESSON_ PARTS OF PLANT AND THEIR FUNCTIONS.mp3",
+                "size": 28323350
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education BoardP4 SST UNIT 9. Christian valuesLESSON_ Gods commandments.mp3",
+                "path": "primary-school-content/p4/audio/Rwanda Education BoardP4 SST UNIT 9. Christian valuesLESSON_ Gods commandments.mp3",
+                "size": 24122860
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education BoardP4 SSTUNIT 1LESSON_ Social Economic activities in our district.mp3",
+                "path": "primary-school-content/p4/audio/Rwanda Education BoardP4 SSTUNIT 1LESSON_ Social Economic activities in our district.mp3",
+                "size": 22563036
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education BoardP4 SSTUNIT 2_Vocation of the Israelite peopleLESSON_Vocation of the Israel.mp3",
+                "path": "primary-school-content/p4/audio/Rwanda Education BoardP4 SSTUNIT 2_Vocation of the Israelite peopleLESSON_Vocation of the Israel.mp3",
+                "size": 22083428
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education BoardP4SETUNIT 10_ Animals Management LESSON_ DISTINGUISHING MALE FROM FEMALE R.mp3",
+                "path": "primary-school-content/p4/audio/Rwanda Education BoardP4SETUNIT 10_ Animals Management LESSON_ DISTINGUISHING MALE FROM FEMALE R.mp3",
+                "size": 28923330
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education BoardP4SETUnit 11_ Plants LESSON_ REVISION OF UNIT 11.mp3",
+                "path": "primary-school-content/p4/audio/Rwanda Education BoardP4SETUnit 11_ Plants LESSON_ REVISION OF UNIT 11.mp3",
+                "size": 28923330
               }
             ]
           },
           {
             "type": "folder",
-            "path": "primary-school-content/p4/history",
-            "name": "History",
+            "path": "primary-school-content/p4/book",
+            "name": "Book",
             "children": [
               {
-                "type": "folder",
-                "path": "primary-school-content/p4/history/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "P4 Mathematics PB.pdf",
+                "path": "primary-school-content/p4/book/P4 Mathematics PB.pdf",
+                "size": 27424140
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p4/history/book",
-                "name": "Book",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Emily Henry   Book Lovers (2022, Penguin Publishing Group)   libgen.li.pdf",
-                    "path": "primary-school-content/p4/history/book/Emily Henry - Book Lovers (2022, Penguin Publishing Group) - libgen.li.pdf",
-                    "size": 3483726
-                  }
-                ]
+                "type": "file",
+                "name": "P4 Creative Arts PB.pdf",
+                "path": "primary-school-content/p4/book/P4-Creative Arts-PB.pdf",
+                "size": 17187809
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p4/history/video",
-                "name": "Video",
-                "children": []
+                "type": "file",
+                "name": "P4 ENGLISH PB.pdf",
+                "path": "primary-school-content/p4/book/P4-ENGLISH-PB.pdf",
+                "size": 50342634
+              },
+              {
+                "type": "file",
+                "name": "P4 French PB.pdf",
+                "path": "primary-school-content/p4/book/P4-French-PB.pdf",
+                "size": 38399067
+              },
+              {
+                "type": "file",
+                "name": "P4 Kinyarwanda PB.pdf",
+                "path": "primary-school-content/p4/book/P4-Kinyarwanda-PB.pdf",
+                "size": 20285142
+              },
+              {
+                "type": "file",
+                "name": "P4 SET PB.pdf",
+                "path": "primary-school-content/p4/book/P4-SET-PB.pdf",
+                "size": 29686236
+              },
+              {
+                "type": "file",
+                "name": "P4 SST PB (1).pdf",
+                "path": "primary-school-content/p4/book/P4-SST-PB (1).pdf",
+                "size": 37667180
               }
             ]
           },
           {
             "type": "folder",
-            "path": "primary-school-content/p4/mathematics",
-            "name": "Mathematics",
+            "path": "primary-school-content/p4/video",
+            "name": "Video",
             "children": [
               {
-                "type": "folder",
-                "path": "primary-school-content/p4/mathematics/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "REB  P4  Mathematics  Unit 2_ Positive and Negative Integers Lesson 6_ Distance between integers.mp4",
+                "path": "primary-school-content/p4/video/REB  P4  Mathematics  Unit 2_ Positive and Negative Integers Lesson 6_ Distance between integers.mp4",
+                "size": 55689347
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p4/mathematics/book",
-                "name": "Book",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p4/mathematics/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "path": "primary-school-content/p4/mathematics/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "size": 721602
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "folder",
-            "path": "primary-school-content/p4/science",
-            "name": "Science",
-            "children": [
-              {
-                "type": "folder",
-                "path": "primary-school-content/p4/science/audio",
-                "name": "Audio",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p4/science/book",
-                "name": "Book",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p4/science/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "primary-school-content/p4/science/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  },
-                  {
-                    "type": "file",
-                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "path": "primary-school-content/p4/science/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "size": 721602
-                  }
-                ]
+                "type": "file",
+                "name": "REB P1ENGLISHGREETINGS.mp4",
+                "path": "primary-school-content/p4/video/REB P1ENGLISHGREETINGS.mp4",
+                "size": 11689948
               }
             ]
           }
@@ -769,143 +602,101 @@
         "children": [
           {
             "type": "folder",
-            "path": "primary-school-content/p5/english",
-            "name": "English",
+            "path": "primary-school-content/p5/audio",
+            "name": "Audio",
             "children": [
               {
-                "type": "folder",
-                "path": "primary-school-content/p5/english/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "Rwanda Education Board  P6 Ikinyarwandaunit 2 EPISODE N0 2.mp3",
+                "path": "primary-school-content/p5/audio/Rwanda Education Board  P6 Ikinyarwandaunit 2 EPISODE N0 2.mp3",
+                "size": 25562938
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p5/english/book",
-                "name": "Book",
-                "children": []
+                "type": "file",
+                "name": "Rwanda Education Board P 6Englishunit 5 _ Family relationshipsLesson_ Describing family members.mp3",
+                "path": "primary-school-content/p5/audio/Rwanda Education Board P 6Englishunit 5 _ Family relationshipsLesson_ Describing family members.mp3",
+                "size": 26403036
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p5/english/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "primary-school-content/p5/english/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  },
-                  {
-                    "type": "file",
-                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "path": "primary-school-content/p5/english/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "size": 721602
-                  }
-                ]
+                "type": "file",
+                "name": "Rwanda Education Board p 6Ikinyarwandaisomo_ itondaguranshinga.mp3",
+                "path": "primary-school-content/p5/audio/Rwanda Education Board p 6Ikinyarwandaisomo_ itondaguranshinga.mp3",
+                "size": 28923330
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education BoardP6 EnglishUnit 5_ Family relationships lesson_Saying who you like.mp3",
+                "path": "primary-school-content/p5/audio/Rwanda Education BoardP6 EnglishUnit 5_ Family relationships lesson_Saying who you like.mp3",
+                "size": 28923330
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education Board_IKINYARWANDA_UMWAKA WA 6_ ISOMO_ INSHINGA IRI MU MBUNDO [sceNTHeFDmI].mp3",
+                "path": "primary-school-content/p5/audio/Rwanda Education Board_IKINYARWANDA_UMWAKA WA 6_ ISOMO_ INSHINGA IRI MU MBUNDO [sceNTHeFDmI].mp3",
+                "size": 8721721
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Eduication BoardP 6Englishunit 8_ Environment lesson_ describe the map of western provinc.mp3",
+                "path": "primary-school-content/p5/audio/Rwanda Eduication BoardP 6Englishunit 8_ Environment lesson_ describe the map of western provinc.mp3",
+                "size": 29883173
               }
             ]
           },
           {
             "type": "folder",
-            "path": "primary-school-content/p5/history",
-            "name": "History",
+            "path": "primary-school-content/p5/book",
+            "name": "Book",
             "children": [
               {
-                "type": "folder",
-                "path": "primary-school-content/p5/history/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "P5 Creative Arts PB.pdf",
+                "path": "primary-school-content/p5/book/P5-Creative Arts-PB.pdf",
+                "size": 23321339
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p5/history/book",
-                "name": "Book",
-                "children": []
+                "type": "file",
+                "name": "P5 ENGLISH PB.pdf",
+                "path": "primary-school-content/p5/book/P5-ENGLISH-PB.pdf",
+                "size": 24193421
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p5/history/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "primary-school-content/p5/history/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  },
-                  {
-                    "type": "file",
-                    "name": "Yt1s.com   Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "path": "primary-school-content/p5/history/video/yt1s.com - Amazing Animated Logo Intro Video   Black And White Animation Intro Template_1080p (1).mp4",
-                    "size": 721602
-                  }
-                ]
+                "type": "file",
+                "name": "P5 French PB.pdf",
+                "path": "primary-school-content/p5/book/P5-French-PB.pdf",
+                "size": 26290848
+              },
+              {
+                "type": "file",
+                "name": "P5 Kinyarwanda PB.pdf",
+                "path": "primary-school-content/p5/book/P5-Kinyarwanda-PB.pdf",
+                "size": 23647387
+              },
+              {
+                "type": "file",
+                "name": "P5 Mathematics PB.pdf",
+                "path": "primary-school-content/p5/book/P5-Mathematics-PB.pdf",
+                "size": 14345470
+              },
+              {
+                "type": "file",
+                "name": "P5 SET PB.pdf",
+                "path": "primary-school-content/p5/book/P5-SET-PB.pdf",
+                "size": 40623073
+              },
+              {
+                "type": "file",
+                "name": "P5 SST PB (2).pdf",
+                "path": "primary-school-content/p5/book/P5-SST-PB (2).pdf",
+                "size": 18936893
               }
             ]
           },
           {
             "type": "folder",
-            "path": "primary-school-content/p5/mathematics",
-            "name": "Mathematics",
-            "children": [
-              {
-                "type": "folder",
-                "path": "primary-school-content/p5/mathematics/audio",
-                "name": "Audio",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p5/mathematics/book",
-                "name": "Book",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p5/mathematics/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "primary-school-content/p5/mathematics/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "folder",
-            "path": "primary-school-content/p5/science",
-            "name": "Science",
-            "children": [
-              {
-                "type": "folder",
-                "path": "primary-school-content/p5/science/audio",
-                "name": "Audio",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p5/science/book",
-                "name": "Book",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p5/science/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "primary-school-content/p5/science/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  }
-                ]
-              }
-            ]
+            "path": "primary-school-content/p5/video",
+            "name": "Video",
+            "children": []
           }
         ]
       },
@@ -916,131 +707,101 @@
         "children": [
           {
             "type": "folder",
-            "path": "primary-school-content/p6/english",
-            "name": "English",
+            "path": "primary-school-content/p6/audio",
+            "name": "Audio",
             "children": [
               {
-                "type": "folder",
-                "path": "primary-school-content/p6/english/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "REB  P6  SET  Unit 14_ Energy Management  Lesson_ Sources of Energy.mp3",
+                "path": "primary-school-content/p6/audio/REB  P6  SET  Unit 14_ Energy Management  Lesson_ Sources of Energy.mp3",
+                "size": 28443095
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p6/english/book",
-                "name": "Book",
-                "children": []
+                "type": "file",
+                "name": "REB  P6  Science and Elementary Technology  Unit 14  Lesson_ Biogas.mp3",
+                "path": "primary-school-content/p6/audio/REB  P6  Science and Elementary Technology  Unit 14  Lesson_ Biogas.mp3",
+                "size": 29763428
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p6/english/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "primary-school-content/p6/english/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  }
-                ]
+                "type": "file",
+                "name": "REB _ P6 _ Science and Elementary Technology _ Unit 14 _ Lesson_ Energy Transformation [YKmmWCQDHSU].mp3",
+                "path": "primary-school-content/p6/audio/REB _ P6 _ Science and Elementary Technology _ Unit 14 _ Lesson_ Energy Transformation [YKmmWCQDHSU].mp3",
+                "size": 11149821
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education Board  P6  Social Studies  Unit 5  Lesson1  Episode2.mp3",
+                "path": "primary-school-content/p6/audio/Rwanda Education Board  P6  Social Studies  Unit 5  Lesson1  Episode2.mp3",
+                "size": 28923330
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education Board social studiesP6 UNIT6_Direction and locationlesson _Types of climate.mp3",
+                "path": "primary-school-content/p6/audio/Rwanda Education Board social studiesP6 UNIT6_Direction and locationlesson _Types of climate.mp3",
+                "size": 25562938
+              },
+              {
+                "type": "file",
+                "name": "Rwanda Education Board_P 6_Social studies_UNIT 8_lesson_Natural resources [MKtHE3U0HCs].mp3",
+                "path": "primary-school-content/p6/audio/Rwanda Education Board_P 6_Social studies_UNIT 8_lesson_Natural resources [MKtHE3U0HCs].mp3",
+                "size": 10484543
               }
             ]
           },
           {
             "type": "folder",
-            "path": "primary-school-content/p6/history",
-            "name": "History",
+            "path": "primary-school-content/p6/book",
+            "name": "Book",
             "children": [
               {
-                "type": "folder",
-                "path": "primary-school-content/p6/history/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "P6 Mathematics PB.pdf",
+                "path": "primary-school-content/p6/book/P6 Mathematics PB.pdf",
+                "size": 17014970
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p6/history/book",
-                "name": "Book",
-                "children": []
+                "type": "file",
+                "name": "P6 Creative Arts PB.pdf",
+                "path": "primary-school-content/p6/book/P6-Creative Arts-PB.pdf",
+                "size": 19889387
               },
               {
-                "type": "folder",
-                "path": "primary-school-content/p6/history/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "primary-school-content/p6/history/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  }
-                ]
+                "type": "file",
+                "name": "P6 ENGLISH PB.pdf",
+                "path": "primary-school-content/p6/book/P6-ENGLISH-PB.pdf",
+                "size": 43709920
+              },
+              {
+                "type": "file",
+                "name": "P6 French PB.pdf",
+                "path": "primary-school-content/p6/book/P6-French-PB.pdf",
+                "size": 32822329
+              },
+              {
+                "type": "file",
+                "name": "P6 Kinyarwanda PB.pdf",
+                "path": "primary-school-content/p6/book/P6-Kinyarwanda-PB.pdf",
+                "size": 17885226
+              },
+              {
+                "type": "file",
+                "name": "P6 SET PB.pdf",
+                "path": "primary-school-content/p6/book/P6-SET-PB.pdf",
+                "size": 23125854
+              },
+              {
+                "type": "file",
+                "name": "P6 SST PB (1).pdf",
+                "path": "primary-school-content/p6/book/P6-SST-PB (1).pdf",
+                "size": 26340456
               }
             ]
           },
           {
             "type": "folder",
-            "path": "primary-school-content/p6/mathematics",
-            "name": "Mathematics",
-            "children": [
-              {
-                "type": "folder",
-                "path": "primary-school-content/p6/mathematics/audio",
-                "name": "Audio",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p6/mathematics/book",
-                "name": "Book",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p6/mathematics/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "primary-school-content/p6/mathematics/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "folder",
-            "path": "primary-school-content/p6/science",
-            "name": "Science",
-            "children": [
-              {
-                "type": "folder",
-                "path": "primary-school-content/p6/science/audio",
-                "name": "Audio",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p6/science/book",
-                "name": "Book",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "primary-school-content/p6/science/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "primary-school-content/p6/science/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  }
-                ]
-              }
-            ]
+            "path": "primary-school-content/p6/video",
+            "name": "Video",
+            "children": []
           }
         ]
       }
@@ -2001,207 +1762,52 @@
         "children": [
           {
             "type": "folder",
-            "path": "secondary-school-content/s6/biology",
-            "name": "Biology",
+            "path": "secondary-school-content/s6/audio",
+            "name": "Audio",
+            "children": []
+          },
+          {
+            "type": "folder",
+            "path": "secondary-school-content/s6/book",
+            "name": "Book",
             "children": [
               {
-                "type": "folder",
-                "path": "secondary-school-content/s6/biology/audio",
-                "name": "Audio",
-                "children": []
+                "type": "file",
+                "name": "Advanced Mathematics S6 SB.pdf",
+                "path": "secondary-school-content/s6/book/Advanced Mathematics S6 SB.pdf",
+                "size": 11724727
               },
               {
-                "type": "folder",
-                "path": "secondary-school-content/s6/biology/book",
-                "name": "Book",
-                "children": []
+                "type": "file",
+                "name": "Biology S6 Student Book .pdf",
+                "path": "secondary-school-content/s6/book/Biology S6 Student Book .pdf",
+                "size": 34299502
               },
               {
-                "type": "folder",
-                "path": "secondary-school-content/s6/biology/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "secondary-school-content/s6/biology/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  }
-                ]
+                "type": "file",
+                "name": "Chemistry S6 SB.pdf",
+                "path": "secondary-school-content/s6/book/Chemistry S6 SB.pdf",
+                "size": 19936350
+              },
+              {
+                "type": "file",
+                "name": "Geography S6 SB.pdf",
+                "path": "secondary-school-content/s6/book/Geography S6 SB.pdf",
+                "size": 43721703
+              },
+              {
+                "type": "file",
+                "name": "Physics  S6 SB .pdf",
+                "path": "secondary-school-content/s6/book/Physics  S6 SB .pdf",
+                "size": 10790035
               }
             ]
           },
           {
             "type": "folder",
-            "path": "secondary-school-content/s6/chemistry",
-            "name": "Chemistry",
-            "children": [
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/chemistry/audio",
-                "name": "Audio",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Days Gone Quiet by Lewis Capaldi.mp3",
-                    "path": "secondary-school-content/s6/chemistry/audio/Days Gone Quiet by Lewis Capaldi.mp3",
-                    "size": 4070553
-                  }
-                ]
-              },
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/chemistry/book",
-                "name": "Book",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/chemistry/video",
-                "name": "Video",
-                "children": []
-              }
-            ]
-          },
-          {
-            "type": "folder",
-            "path": "secondary-school-content/s6/english",
-            "name": "English",
-            "children": [
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/english/audio",
-                "name": "Audio",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/english/book",
-                "name": "Book",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Contract_Template.pdf",
-                    "path": "secondary-school-content/s6/english/book/Contract_Template.pdf",
-                    "size": 138244
-                  },
-                  {
-                    "type": "file",
-                    "name": "Emily Henry   Book Lovers (2022, Penguin Publishing Group)   libgen.li.pdf",
-                    "path": "secondary-school-content/s6/english/book/Emily Henry - Book Lovers (2022, Penguin Publishing Group) - libgen.li.pdf",
-                    "size": 3483726
-                  }
-                ]
-              },
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/english/video",
-                "name": "Video",
-                "children": []
-              }
-            ]
-          },
-          {
-            "type": "folder",
-            "path": "secondary-school-content/s6/history",
-            "name": "History",
-            "children": [
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/history/audio",
-                "name": "Audio",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/history/book",
-                "name": "Book",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Contract_Template.pdf",
-                    "path": "secondary-school-content/s6/history/book/Contract_Template.pdf",
-                    "size": 138244
-                  },
-                  {
-                    "type": "file",
-                    "name": "Emily Henry   Book Lovers (2022, Penguin Publishing Group)   libgen.li.pdf",
-                    "path": "secondary-school-content/s6/history/book/Emily Henry - Book Lovers (2022, Penguin Publishing Group) - libgen.li.pdf",
-                    "size": 3483726
-                  }
-                ]
-              },
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/history/video",
-                "name": "Video",
-                "children": []
-              }
-            ]
-          },
-          {
-            "type": "folder",
-            "path": "secondary-school-content/s6/mathematics",
-            "name": "Mathematics",
-            "children": [
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/mathematics/audio",
-                "name": "Audio",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/mathematics/book",
-                "name": "Book",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/mathematics/video",
-                "name": "Video",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "path": "secondary-school-content/s6/mathematics/video/Snapinsta.app_video_4C4D0507D143676329D05ECB4C441B8B_video_dashinit.mp4",
-                    "size": 6036600
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "folder",
-            "path": "secondary-school-content/s6/physics",
-            "name": "Physics",
-            "children": [
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/physics/audio",
-                "name": "Audio",
-                "children": []
-              },
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/physics/book",
-                "name": "Book",
-                "children": [
-                  {
-                    "type": "file",
-                    "name": "Contract_Template.pdf",
-                    "path": "secondary-school-content/s6/physics/book/Contract_Template.pdf",
-                    "size": 138244
-                  }
-                ]
-              },
-              {
-                "type": "folder",
-                "path": "secondary-school-content/s6/physics/video",
-                "name": "Video",
-                "children": []
-              }
-            ]
+            "path": "secondary-school-content/s6/video",
+            "name": "Video",
+            "children": []
           }
         ]
       }
