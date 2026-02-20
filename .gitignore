@@ -3,3 +3,5 @@ node_modules/
 
 .env
 content/
+src/metadata.json
+src/books.metadata.json
