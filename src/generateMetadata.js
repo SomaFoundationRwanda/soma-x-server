@@ -6,7 +6,7 @@ import path, { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const CONTENT_DIR = path.join(__dirname, '../../content/curriculum/rwanda');
+const CONTENT_DIR = path.join(__dirname, '../content/curriculum/rwanda');
 const OUTPUT_FILE = path.join(__dirname, 'metadata.json');
 
 function scanFolder(dir, base = '') {

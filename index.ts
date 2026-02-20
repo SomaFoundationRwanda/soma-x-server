@@ -17,7 +17,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
-const CONTENT_DIR = path.join(__dirname, '../content/curriculum/rwanda');
+const CONTENT_DIR = path.join(__dirname, './content/curriculum/rwanda');
 const BOOKS_DIR = path.join(__dirname, '../content/books');
 const METADATA_FILE = path.join(__dirname, './src/metadata.json');
 const BOOKS_METADATA_FILE = path.join(__dirname, './src/books.metadata.json');
