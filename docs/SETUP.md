@@ -168,7 +168,20 @@ curl -X POST -H "Authorization: Bearer $ADMIN_TOKEN" \
 
 To cut a box off, PATCH the device with `{"status":"revoked"}`.
 
-## 9. Check that boxes are arriving
+## 9. Give the staff portal its own token
+
+The staff portal (sfr-management) runs on the same VPS and talks to this server over localhost.
+Give it a scoped token, never `ADMIN_TOKEN`:
+
+```bash
+npm run token:create -- --name "staff portal" --scopes read,devices:write,content:write
+```
+
+Put the printed `sxa_...` token in the portal's `.env` as `SOMAX_API_TOKEN`, with
+`SOMAX_API_URL=http://127.0.0.1:2999`. Everything the portal changes is recorded with the staff
+member's email (`GET /api/v1/admin/audit`).
+
+## 10. Check that boxes are arriving
 
 ```bash
 H="Authorization: Bearer $ADMIN_TOKEN"; U=https://cloud.somaglobaltalent.org/api/v1/admin
@@ -180,7 +193,7 @@ curl -s -H "$H" "$U/stats/usage?groupBy=district"
 A box shows up after its first successful sync. Boxes are offline most of the time, so an old
 `last_seen_at` is normal. They catch up as soon as they are connected.
 
-## 10. Backups
+## 11. Backups
 
 Back up the database (everything boxes have pushed is stored only here) and the content folder:
 
