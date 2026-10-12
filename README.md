@@ -46,8 +46,22 @@ Hidden files and partial uploads (`.part`, `.filepart`, `.tmp`, `.crdownload`, `
 
 ## API
 
-Admin endpoints need `Authorization: Bearer $ADMIN_TOKEN`. Device endpoints need
-`Authorization: Bearer <device api key>`.
+Admin endpoints need `Authorization: Bearer <token>`, using either the root `ADMIN_TOKEN` or a
+**scoped API token**. Device endpoints need `Authorization: Bearer <device api key>`.
+
+Other services, such as the staff portal, get a scoped token instead of `ADMIN_TOKEN`:
+
+```bash
+npm run token:create -- --name "staff portal" --scopes read,devices:write,content:write
+```
+
+- **`read`** covers every `GET`.
+- **`devices:write`** covers registering, editing and rotating box keys.
+- **`content:write`** covers uploading, editing and deleting content, and reindexing.
+
+Every change made through the admin API is recorded in `admin_audit`: the token and, when the
+caller sends an `X-Actor` header, the person it acted for. `GET /api/v1/admin/audit` lists the
+changes. To revoke a token, set its `revoked_at` in `api_tokens`.
 
 ### Legacy (public; what deployed boxes call today, same response shapes as before)
 

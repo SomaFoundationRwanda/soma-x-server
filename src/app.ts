@@ -44,7 +44,7 @@ export function createApp({ config, db, indexer }: { config: Config; db: Db; ind
     });
 
     // Admin uploads are multipart and parse their own body.
-    app.use('/api/v1/admin', requireAdmin(config.adminToken), express.json({ limit: '1mb' }), adminRouter(db, indexer, config));
+    app.use('/api/v1/admin', requireAdmin(db, config.adminToken), express.json({ limit: '1mb' }), adminRouter(db, indexer, config));
     app.use('/api/v1', express.json({ limit: '25mb' }), deviceRouter(db, indexer.roots));
     app.use(legacyRouter(db, indexer.roots));
 
