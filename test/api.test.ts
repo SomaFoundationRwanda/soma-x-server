@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import AdmZip from 'adm-zip';
-import { sql } from 'drizzle-orm';
+import { eq, sql } from 'drizzle-orm';
 import { PDFDocument } from 'pdf-lib';
 import request from 'supertest';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
@@ -12,6 +12,8 @@ import { loadConfig } from '../src/config.js';
 import { createDb } from '../src/db/client.js';
 import { runMigrations } from '../src/db/migrate.js';
 import { Indexer } from '../src/ingest/indexer.js';
+import { apiTokens } from '../src/db/schema.js';
+import { generateApiToken, hashKey } from '../src/http/auth.js';
 import { startWatcher } from '../src/ingest/watcher.js';
 
 const ADMIN = 'test-admin-token-0123456789abcdef';
@@ -383,6 +385,43 @@ describe('box sync receiver (somabox-lms outbox)', () => {
 
     it('needs the box key', async () => {
         expect((await request(app).post('/api/v1/box-sync').send({ records: [] })).status).toBe(401);
+    });
+});
+
+describe('scoped API tokens (e.g. the staff portal)', () => {
+    async function token(scopes: string[]) {
+        const t = generateApiToken();
+        await ctx.db.insert(apiTokens).values({ name: `test ${scopes.join('+')}`, tokenHash: t.hash, tokenPrefix: t.prefix, scopes });
+        return t.token;
+    }
+
+    it('limits each token to its scopes', async () => {
+        const reader = await token(['read']);
+        const as = (t: string) => (r: request.Test) => r.set('Authorization', `Bearer ${t}`);
+        expect((await as(reader)(request(app).get('/api/v1/admin/stats/devices'))).status).toBe(200);
+        const denied = await as(reader)(request(app).post('/api/v1/admin/devices')).send({ name: 'x' });
+        expect(denied.status).toBe(403);
+        expect(denied.body.error).toContain('devices:write');
+
+        const fleet = await token(['read', 'devices:write']);
+        expect((await as(fleet)(request(app).post('/api/v1/admin/devices')).send({ name: 'Portal box' })).status).toBe(201);
+        expect((await as(fleet)(request(app).post('/api/v1/admin/reindex'))).status).toBe(403);
+        expect((await request(app).get('/api/v1/admin/stats/devices').set('Authorization', 'Bearer sxa_nope')).status).toBe(401);
+    });
+
+    it('records who changed what, including the person the portal acted for', async () => {
+        const t = await token(['read', 'devices:write']);
+        await request(app).post('/api/v1/admin/devices').set('Authorization', `Bearer ${t}`).set('X-Actor', 'se@sfr.org').send({ name: 'Audited box' });
+        await request(app).get('/api/v1/admin/devices').set('Authorization', `Bearer ${t}`); // reads aren't audited
+        const audit = await admin(request(app).get('/api/v1/admin/audit'));
+        expect(audit.body[0]).toMatchObject({ tokenName: 'test read+devices:write', actor: 'se@sfr.org', method: 'POST', path: '/api/v1/admin/devices', status: 201 });
+        expect(audit.body.some((a: any) => a.method === 'GET')).toBe(false);
+    });
+
+    it('stops working once revoked', async () => {
+        const t = await token(['read']);
+        await ctx.db.update(apiTokens).set({ revokedAt: new Date() }).where(eq(apiTokens.tokenHash, hashKey(t)));
+        expect((await request(app).get('/api/v1/admin/devices').set('Authorization', `Bearer ${t}`)).status).toBe(401);
     });
 });
 

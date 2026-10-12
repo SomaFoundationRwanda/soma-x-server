@@ -5,7 +5,7 @@ import multer from 'multer';
 import { and, asc, desc, eq, gt, ilike, isNull, or, sql, type SQL } from 'drizzle-orm';
 import { z } from 'zod';
 import type { Db } from '../db/client.js';
-import { boxRecords, COLLECTIONS, contentItems, devices } from '../db/schema.js';
+import { adminAudit, boxRecords, COLLECTIONS, contentItems, devices } from '../db/schema.js';
 import { generateDeviceKey } from '../http/auth.js';
 import { HttpError, idParam, notFound } from '../http/errors.js';
 import { contentToApi, deviceToApi } from '../http/serialize.js';
@@ -288,6 +288,12 @@ export function adminRouter(db: Db, indexer: Indexer, opts: { uploadTmpDir: stri
             ORDER BY c.occurred_at DESC
             LIMIT ${q.limit}`);
         res.json(result.rows);
+    });
+
+    /** Changes made through the admin API, newest first. */
+    router.get('/audit', async (req, res) => {
+        const limit = z.coerce.number().int().min(1).max(1000).default(200).parse(req.query.limit);
+        res.json(await db.select().from(adminAudit).orderBy(desc(adminAudit.at)).limit(limit));
     });
 
     router.use('/stats', statsRouter(db));

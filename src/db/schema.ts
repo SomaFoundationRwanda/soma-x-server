@@ -139,5 +139,38 @@ export const boxRecords = pgTable(
     ],
 );
 
+// Scoped keys for other services (e.g. the staff portal), instead of sharing ADMIN_TOKEN.
+export const API_SCOPES = ['read', 'content:write', 'devices:write'] as const;
+export type ApiScope = (typeof API_SCOPES)[number];
+
+export const apiTokens = pgTable('api_tokens', {
+    id: uuid('id').primaryKey().defaultRandom(),
+    name: text('name').notNull(),
+    tokenHash: text('token_hash').notNull().unique(),
+    tokenPrefix: text('token_prefix').notNull(),
+    scopes: text('scopes').array().notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+    lastUsedAt: timestamp('last_used_at', { withTimezone: true }),
+    revokedAt: timestamp('revoked_at', { withTimezone: true }),
+});
+
+// Every change made through the admin API: who (token + the person it acted for), what, when.
+export const adminAudit = pgTable(
+    'admin_audit',
+    {
+        id: bigserial('id', { mode: 'number' }).primaryKey(),
+        at: timestamp('at', { withTimezone: true }).notNull().defaultNow(),
+        tokenId: uuid('token_id').references(() => apiTokens.id, { onDelete: 'set null' }),
+        tokenName: text('token_name').notNull(),
+        // The staff member the calling service acted for (X-Actor header), if any.
+        actor: text('actor'),
+        method: text('method').notNull(),
+        path: text('path').notNull(),
+        status: integer('status').notNull(),
+        ip: text('ip'),
+    },
+    t => [index('admin_audit_at_idx').on(t.at)],
+);
+
 export type ContentItem = typeof contentItems.$inferSelect;
 export type Device = typeof devices.$inferSelect;
