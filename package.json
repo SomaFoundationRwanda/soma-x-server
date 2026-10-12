@@ -1,26 +1,49 @@
 {
-  "name": "server-simulator",
-  "version": "1.0.0",
+  "name": "soma-x-server",
+  "version": "2.0.0",
+  "description": "SomaX cloud server: content catalogue for SomaBox devices, backed by Postgres",
   "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon --exec ts-node index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "startprod": "pm2 start index.ts --name soma-x-server --interpreter node"
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=20.19"
   },
-  "keywords": [],
-  "author": "",
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=.env src/index.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node --env-file-if-exists=.env dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx --env-file-if-exists=.env src/db/migrate.ts",
+    "device:create": "tsx --env-file-if-exists=.env src/cli/create-device.ts",
+    "test": "vitest run",
+    "startprod": "npm run build && pm2 start ecosystem.config.cjs"
+  },
   "license": "ISC",
-  "description": "",
   "dependencies": {
+    "adm-zip": "^0.6.1",
+    "chokidar": "^5.0.0",
     "cors": "^2.8.6",
-    "express": "^5.1.0"
+    "drizzle-orm": "^0.45.3",
+    "express": "^5.2.1",
+    "mime-types": "^3.0.2",
+    "multer": "^2.4.0",
+    "pdf-lib": "^1.17.1",
+    "pg": "^8.23.0",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
+    "@types/adm-zip": "^0.5.8",
     "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.5",
-    "@types/node": "^24.10.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "@types/express": "^5.0.6",
+    "@types/mime-types": "^3.0.1",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^22.20.4",
+    "@types/pg": "^8.23.1",
+    "@types/supertest": "^7.2.1",
+    "drizzle-kit": "^0.31.11",
+    "supertest": "^7.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
   }
 }

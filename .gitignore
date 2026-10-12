@@ -1,7 +1,8 @@
-# ignore node modules
 node_modules/
-
+dist/
 .env
+.DS_Store
+
+# uploaded/served content and runtime data live outside git
 content/
-src/metadata.json
-src/books.metadata.json
+data/
