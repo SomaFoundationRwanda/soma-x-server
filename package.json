@@ -5,7 +5,7 @@
   "type": "module",
   "main": "dist/index.js",
   "engines": {
-    "node": ">=20.19"
+    "node": ">=22.9"
   },
   "scripts": {
     "dev": "tsx watch --env-file-if-exists=.env src/index.ts",

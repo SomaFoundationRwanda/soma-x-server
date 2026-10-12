@@ -19,7 +19,7 @@ survive rescans.
 
 ## Quick start (development)
 
-Requirements: Node 20.19+ (22 LTS recommended), Postgres 14+, and optionally `ffprobe` (ffmpeg).
+Requirements: Node 22.9+ (22 LTS), Postgres 14+, and optionally `ffprobe` (ffmpeg).
 
 ```bash
 npm install
@@ -111,6 +111,8 @@ curl -H "Authorization: Bearer $ADMIN_TOKEN" \
 Register a box from the shell: `npm run device:create -- --name "GS Kigali 1" --serial SBX-0001`.
 
 ## Deploying to the VPS
+
+The full step-by-step guide is [docs/SETUP.md](docs/SETUP.md). In short:
 
 ```bash
 sudo apt install -y postgresql ffmpeg

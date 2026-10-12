@@ -3,6 +3,8 @@ module.exports = {
     apps: [
         {
             name: 'soma-x-server',
+            // .env and relative paths (content/, data/) resolve from the repo, wherever pm2 is started.
+            cwd: __dirname,
             script: 'dist/index.js',
             node_args: '--env-file-if-exists=.env',
             // One instance: the folder watcher and indexer must not run twice.
