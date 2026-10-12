@@ -11,6 +11,7 @@ import { HttpError, idParam, notFound } from '../http/errors.js';
 import { contentToApi, deviceToApi } from '../http/serialize.js';
 import type { Indexer, ReconcileStats } from '../ingest/indexer.js';
 import { isIgnoredRelPath, normalizeRelPath, toAbsPath } from '../ingest/paths.js';
+import { learnersRouter } from './learners.js';
 import { currentRecords, statsRouter } from './stats.js';
 
 const collection = z.enum(COLLECTIONS);
@@ -297,5 +298,6 @@ export function adminRouter(db: Db, indexer: Indexer, opts: { uploadTmpDir: stri
     });
 
     router.use('/stats', statsRouter(db));
+    router.use('/stats', learnersRouter(db));
     return router;
 }
