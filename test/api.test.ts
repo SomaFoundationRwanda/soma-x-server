@@ -383,6 +383,79 @@ describe('box sync receiver (somabox-lms outbox)', () => {
         expect(overview.body.people).toEqual(expect.arrayContaining([{ role: 'scholar', people: 1 }, { role: 'teacher', people: 1 }]));
     });
 
+    it('lists learners with their profile, enrolments and performance, and computes shares', async () => {
+        const [a, b, c] = [randomUUID(), randomUUID(), randomUUID()];
+        const done = '2026-10-01T09:00:00Z';
+        const profile = (id: number, extra: Record<string, unknown>) => ({ id, role: 'scholar', grade_level: 'P4', created_at: done, ...extra });
+        const r = (entity: string, data: Record<string, unknown>) => rec(entity, 'insert', randomUUID(), data);
+        await post({
+            boxId: BOX_ID,
+            records: [
+                rec('users', 'snapshot', a, profile(10, { learner_code: 'GSK-0010', gender: 'female', is_rural: 1, disability_status: 'visual',
+                    region_province: 'Eastern', region_district: 'Bugesera', preferred_language: 'rw', profile_completed_at: done })),
+                rec('users', 'snapshot', b, profile(11, { learner_code: 'GSK-0011', gender: 'male', is_rural: 0, disability_status: 'none',
+                    region_district: 'Not Specified', preferred_language: 'en', profile_completed_at: done })),
+                // Never completed the profile: the defaults (urban, no disability) are not answers.
+                rec('users', 'snapshot', c, profile(12, { learner_code: 'GSK-0012', gender: 'female', is_rural: 0, disability_status: 'none', profile_completed_at: null })),
+                r('enrollments', { course_id: 'C001', role: 'student', status: 'active', user_person: a }),
+                r('enrollments', { course_id: 'C001', role: 'student', status: 'active', user_person: b }),
+                r('enrollments', { course_id: 'C001', role: 'teacher', status: 'active', user_person: randomUUID() }),
+                r('quiz_attempts', { quiz_id: 5, user_id: 10, attempt_number: 1, score_pct: 60, submitted_at: '2026-10-02T10:00:00Z' }),
+                r('quiz_attempts', { quiz_id: 5, user_id: 10, attempt_number: 2, score_pct: 80, submitted_at: '2026-10-03T10:00:00Z' }),
+                r('quiz_attempts', { quiz_id: 6, user_id: 10, attempt_number: 1, score_pct: 90, submitted_at: '2026-10-04T10:00:00Z' }),
+                r('quiz_attempts', { quiz_id: 7, user_id: 10, attempt_number: 1, score_pct: null, submitted_at: null }), // still in progress
+                r('quiz_attempts', { quiz_id: 5, user_id: 11, attempt_number: 1, score_pct: 50, submitted_at: '2026-10-02T10:00:00Z' }),
+                r('outcome_results', { user_id: 10, course_id: 'C001', outcome_id: 1, pct: 40, assessed_at: '2026-10-02T10:00:00Z' }),
+                r('outcome_results', { user_id: 10, course_id: 'C001', outcome_id: 1, pct: 70, assessed_at: '2026-10-05T10:00:00Z' }),
+                r('outcome_results', { user_id: 10, course_id: 'C001', outcome_id: 2, pct: 90, assessed_at: '2026-10-05T10:00:00Z' }),
+            ],
+        });
+
+        const list = async (query: Record<string, string> = {}) => (await admin(request(app).get('/api/v1/admin/stats/learners').query(query))).body;
+        const all = await list();
+        expect(all.total).toBe(4); // learner 1 (synced before profiles were sent) and the three above
+        const first = all.learners.find((l: any) => l.learner_code === 'GSK-0010');
+        expect(first).toMatchObject({
+            sync_id: a, school_name: 'GS Kigali', grade: 'P4', gender: 'female', rural: 'rural', disability: 'visual',
+            province: 'Eastern', district: 'Bugesera', language: 'rw', profile_complete: true,
+            courses: 1, quizzes: 2, quiz_avg: 85, mastery_avg: 80,
+        });
+        expect(first.last_active).toBeTruthy();
+        expect(all.learners.find((l: any) => l.learner_code === 'GSK-0011')).toMatchObject({ rural: 'urban', disability: 'none', district: null, quiz_avg: 50, mastery_avg: null });
+        expect(all.learners.find((l: any) => l.learner_code === 'GSK-0012')).toMatchObject({ gender: 'female', rural: null, disability: null, courses: 0 });
+        expect(all.learners.find((l: any) => l.learner_code === '#1')).toMatchObject({ gender: null, rural: null, disability: null });
+
+        expect((await list({ gender: 'female' })).total).toBe(2);
+        expect((await list({ rural: 'rural' })).learners.map((l: any) => l.learner_code)).toEqual(['GSK-0010']);
+        expect((await list({ disability: 'any' })).learners.map((l: any) => l.learner_code)).toEqual(['GSK-0010']);
+        expect((await list({ disability: 'unknown' })).total).toBe(2);
+        expect((await list({ q: 'gsk-0011' })).learners.map((l: any) => l.learner_code)).toEqual(['GSK-0011']);
+        expect((await list({ limit: '1', offset: '1' })).learners).toHaveLength(1);
+
+        const detail = await admin(request(app).get(`/api/v1/admin/stats/learners/${deviceId}/${a}`));
+        expect(detail.body).toMatchObject({ learner_code: 'GSK-0010', quiz_avg: 85 });
+        expect(detail.body.enrolments).toEqual([{ course_id: 'C001', title: 'Mathematics P4', status: 'active', mastery_avg: 80, outcomes_assessed: 2 }]);
+        expect(detail.body.quizzes).toBe(2);
+        expect(detail.body.quiz_results.map((q: any) => [q.quiz_id, q.best_pct])).toEqual([['6', 90], ['5', 80]]);
+        expect((await admin(request(app).get(`/api/v1/admin/stats/learners/${deviceId}/${randomUUID()}`))).status).toBe(404);
+
+        const stats = (await admin(request(app).get('/api/v1/admin/stats/demographics'))).body;
+        expect(stats).toMatchObject({ learners: 4, profiles_complete: 2, enrolled: 2, boxes: 1, schools: 1 });
+        // Shares are of learners whose answer is known.
+        expect(stats.headline).toEqual({ girlsPct: 66.7, ruralPct: 50, disabilityPct: 50, profilesCompletePct: 50 });
+        expect(stats.gender).toMatchObject({ known: 3, unknown: 1 });
+        expect(stats.gender.groups).toEqual(expect.arrayContaining([
+            expect.objectContaining({ key: 'female', learners: 2, quiz_avg: 85, mastery_avg: 80, share: 66.7 }),
+            expect.objectContaining({ key: 'male', learners: 1, quiz_avg: 50, mastery_avg: null, share: 33.3 }),
+        ]));
+        expect(stats.district.groups).toEqual(expect.arrayContaining([
+            expect.objectContaining({ key: 'Gasabo', learners: 3, girlsPct: 50, ruralPct: 0 }), // their school's district
+            expect.objectContaining({ key: 'Bugesera', learners: 1, girlsPct: 100, ruralPct: 100, disabilityPct: 100 }),
+        ]));
+        expect(stats.box.groups).toEqual([expect.objectContaining({ key: deviceId, label: 'Test box', learners: 4, girlsPct: 66.7 })]);
+        expect((await admin(request(app).get('/api/v1/admin/stats/demographics').query({ gender: 'female' }))).body.learners).toBe(2);
+    });
+
     it('needs the box key', async () => {
         expect((await request(app).post('/api/v1/box-sync').send({ records: [] })).status).toBe(401);
     });
