@@ -172,7 +172,7 @@ export function learnersRouter(db: Db): Router {
                 ORDER BY last_at DESC NULLS LAST LIMIT 50`),
         ]);
         if (!learner.rows[0]) throw new HttpError(404, 'Learner not found');
-        res.json({ ...learner.rows[0], enrolments: courses.rows, quizzes: quizzes.rows });
+        res.json({ ...learner.rows[0], enrolments: courses.rows, quiz_results: quizzes.rows });
     });
 
     /**

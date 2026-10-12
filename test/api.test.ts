@@ -435,7 +435,8 @@ describe('box sync receiver (somabox-lms outbox)', () => {
         const detail = await admin(request(app).get(`/api/v1/admin/stats/learners/${deviceId}/${a}`));
         expect(detail.body).toMatchObject({ learner_code: 'GSK-0010', quiz_avg: 85 });
         expect(detail.body.enrolments).toEqual([{ course_id: 'C001', title: 'Mathematics P4', status: 'active', mastery_avg: 80, outcomes_assessed: 2 }]);
-        expect(detail.body.quizzes.map((q: any) => [q.quiz_id, q.best_pct])).toEqual([['6', 90], ['5', 80]]);
+        expect(detail.body.quizzes).toBe(2);
+        expect(detail.body.quiz_results.map((q: any) => [q.quiz_id, q.best_pct])).toEqual([['6', 90], ['5', 80]]);
         expect((await admin(request(app).get(`/api/v1/admin/stats/learners/${deviceId}/${randomUUID()}`))).status).toBe(404);
 
         const stats = (await admin(request(app).get('/api/v1/admin/stats/demographics'))).body;

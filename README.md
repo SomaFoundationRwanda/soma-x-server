@@ -114,7 +114,7 @@ names, emails or written answers.
 | `GET /stats/schools` | Boxes, learners and teachers per school (as each box's admin set it up) |
 | `GET /stats/content/:id` | How a catalogue item is used on boxes (`content_opened` events) |
 | `GET /stats/learners?deviceId=&school=&district=&grade=&gender=&rural=&disability=&language=&q=&limit=&offset=` | Learners (pseudonymous: learner code, no names): profile answers, school, courses, best-quiz average, outcome mastery, last active |
-| `GET /stats/learners/:deviceId/:syncId` | One learner: each course with its mastery, and quiz results |
+| `GET /stats/learners/:deviceId/:syncId` | One learner: each course with its mastery (`enrolments`), and best quiz results (`quiz_results`) |
 | `GET /stats/demographics` (same filters) | Counts and shares by gender, rural/urban, disability, language, grade, district, school and box, with average performance and the shares of girls, rural learners and learners with a disability within each group. Shares are of learners whose answer is known; box defaults like "prefer not to say" count as unknown unless the learner completed their profile |
 
 Example upload:
