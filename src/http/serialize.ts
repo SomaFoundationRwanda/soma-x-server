@@ -32,12 +32,13 @@ export function deviceToApi(d: Device) {
         notes: d.notes,
         status: d.status,
         apiKeyPrefix: d.apiKeyPrefix,
-        softwareVersion: d.softwareVersion,
+        boxId: d.boxId,
+        school: d.school,
+        hardware: d.hardware,
+        syncHistory: d.syncHistory,
         lastSeenAt: d.lastSeenAt,
         lastIp: d.lastIp,
         lastSyncAt: d.lastSyncAt,
-        lastSyncCursor: d.lastSyncCursor,
-        latestHealth: d.latestHealth,
         createdAt: d.createdAt,
     };
 }

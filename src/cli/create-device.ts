@@ -29,4 +29,4 @@ const [device] = await db
 await pool.end();
 
 console.log(`Device created: ${device!.id} (${device!.name})`);
-console.log(`API key (shown once, put it in the box's .env as CLOUD_API_KEY):\n\n  ${key.key}\n`);
+console.log(`API key (shown once, put it in the box's .env as SYNC_TOKEN):\n\n  ${key.key}\n`);

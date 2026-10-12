@@ -2,16 +2,16 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { Router } from 'express';
 import multer from 'multer';
-import { and, asc, desc, eq, ilike, isNull, or, sql, type SQL } from 'drizzle-orm';
+import { and, asc, desc, eq, gt, ilike, isNull, or, sql, type SQL } from 'drizzle-orm';
 import { z } from 'zod';
 import type { Db } from '../db/client.js';
-import { COLLECTIONS, contentItems, devices } from '../db/schema.js';
+import { boxRecords, COLLECTIONS, contentItems, devices } from '../db/schema.js';
 import { generateDeviceKey } from '../http/auth.js';
 import { HttpError, idParam, notFound } from '../http/errors.js';
 import { contentToApi, deviceToApi } from '../http/serialize.js';
 import type { Indexer, ReconcileStats } from '../ingest/indexer.js';
 import { isIgnoredRelPath, normalizeRelPath, toAbsPath } from '../ingest/paths.js';
-import { statsRouter } from './stats.js';
+import { currentRecords, statsRouter } from './stats.js';
 
 const collection = z.enum(COLLECTIONS);
 const optionalText = (max: number) => z.string().trim().max(max).nullable().optional();
@@ -53,6 +53,13 @@ const listQuery = z.object({
     includeDeleted: boolField.default(false),
     limit: z.coerce.number().int().min(1).max(500).default(100),
     offset: z.coerce.number().int().min(0).default(0),
+});
+
+const recordsQuery = z.object({
+    entity: z.string().regex(/^[a-z][a-z0-9_]{0,62}$/).optional(),
+    deviceId: z.uuid().optional(),
+    after: z.iso.datetime({ offset: true }).transform(v => new Date(v)).optional(),
+    limit: z.coerce.number().int().min(1).max(1000).default(500),
 });
 
 const deviceCreate = z.object({
@@ -243,6 +250,44 @@ export function adminRouter(db: Db, indexer: Indexer, opts: { uploadTmpDir: stri
             .returning();
         if (!device) throw notFound('Device not found');
         res.json({ device: deviceToApi(device), apiKey: key.key });
+    });
+
+    // ---- records pushed by boxes ----
+
+    router.get('/records/entities', async (_req, res) => {
+        const result = await db.execute(sql`
+            SELECT entity, count(*)::int AS records, count(DISTINCT device_id)::int AS devices,
+                   max(received_at) AS last_received_at
+            FROM box_records GROUP BY entity ORDER BY entity`);
+        res.json(result.rows);
+    });
+
+    /** The raw append-only log, oldest first: ?entity=&deviceId=&after=<receivedAt ISO>&limit= */
+    router.get('/records', async (req, res) => {
+        const q = recordsQuery.parse(req.query);
+        const where: SQL[] = [];
+        if (q.entity) where.push(eq(boxRecords.entity, q.entity));
+        if (q.deviceId) where.push(eq(boxRecords.deviceId, q.deviceId));
+        if (q.after) where.push(gt(boxRecords.receivedAt, q.after));
+        const rows = await db
+            .select()
+            .from(boxRecords)
+            .where(where.length ? and(...where) : undefined)
+            .orderBy(asc(boxRecords.receivedAt), asc(boxRecords.syncId))
+            .limit(q.limit);
+        res.json({ records: rows, nextAfter: rows.at(-1)?.receivedAt ?? null });
+    });
+
+    /** Current state of one entity across boxes (latest record per row, deletes dropped): ?entity=courses */
+    router.get('/records/current', async (req, res) => {
+        const q = recordsQuery.extend({ entity: z.string().regex(/^[a-z][a-z0-9_]{0,62}$/) }).parse(req.query);
+        const result = await db.execute(sql`
+            SELECT c.device_id, d.name AS device_name, c.entity_sync_id, c.op, c.occurred_at, c.data
+            FROM ${currentRecords(q.entity)} c JOIN devices d ON d.id = c.device_id
+            ${q.deviceId ? sql`WHERE c.device_id = ${q.deviceId}` : sql``}
+            ORDER BY c.occurred_at DESC
+            LIMIT ${q.limit}`);
+        res.json(result.rows);
     });
 
     router.use('/stats', statsRouter(db));

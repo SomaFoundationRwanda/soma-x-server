@@ -8,8 +8,6 @@ import {
     pgEnum,
     pgSequence,
     pgTable,
-    primaryKey,
-    real,
     text,
     timestamp,
     uniqueIndex,
@@ -67,98 +65,77 @@ export const contentItems = pgTable(
     ],
 );
 
-export const devices = pgTable('devices', {
-    id: uuid('id').primaryKey().defaultRandom(),
-    name: text('name').notNull(),
-    serial: text('serial').unique(),
-    location: text('location'),
-    notes: text('notes'),
-    // sha256 of the API key; the key itself is shown once at creation.
-    apiKeyHash: text('api_key_hash').notNull().unique(),
-    apiKeyPrefix: text('api_key_prefix').notNull(),
-    status: deviceStatusEnum('status').notNull().default('active'),
-    softwareVersion: text('software_version'),
-    lastSeenAt: timestamp('last_seen_at', { withTimezone: true }),
-    lastIp: text('last_ip'),
-    lastSyncCursor: bigint('last_sync_cursor', { mode: 'number' }),
-    lastSyncAt: timestamp('last_sync_at', { withTimezone: true }),
-    latestHealth: jsonb('latest_health').$type<Record<string, unknown>>(),
-    ...timestamps,
-});
+export const devices = pgTable(
+    'devices',
+    {
+        id: uuid('id').primaryKey().defaultRandom(),
+        name: text('name').notNull(),
+        serial: text('serial').unique(),
+        location: text('location'),
+        notes: text('notes'),
+        // sha256 of the API key; the key itself is shown once at creation.
+        apiKeyHash: text('api_key_hash').notNull().unique(),
+        apiKeyPrefix: text('api_key_prefix').notNull(),
+        status: deviceStatusEnum('status').notNull().default('active'),
+        // The box's own id (system_settings.box_id), learned from its first sync.
+        boxId: text('box_id'),
+        // What the box reports with every sync: hardware identity, school, recent sync runs.
+        hardware: jsonb('hardware').$type<Record<string, unknown>>(),
+        school: jsonb('school').$type<Record<string, unknown>>(),
+        syncHistory: jsonb('sync_history').$type<unknown[]>(),
+        lastSeenAt: timestamp('last_seen_at', { withTimezone: true }),
+        lastIp: text('last_ip'),
+        // Last content catalogue sync (GET /api/v1/sync).
+        lastSyncAt: timestamp('last_sync_at', { withTimezone: true }),
+        ...timestamps,
+    },
+    t => [index('devices_box_id_idx').on(t.boxId)],
+);
 
-export const deviceHeartbeats = pgTable(
-    'device_heartbeats',
+// One row per call to /api/v1/box-sync: shows when each box was alive and how much it sent.
+export const deviceCheckins = pgTable(
+    'device_checkins',
     {
         id: bigserial('id', { mode: 'number' }).primaryKey(),
         deviceId: uuid('device_id')
             .notNull()
             .references(() => devices.id, { onDelete: 'cascade' }),
         receivedAt: timestamp('received_at', { withTimezone: true }).notNull().defaultNow(),
-        reportedAt: timestamp('reported_at', { withTimezone: true }),
-        softwareVersion: text('software_version'),
-        uptimeSeconds: integer('uptime_seconds'),
-        diskTotalBytes: bigint('disk_total_bytes', { mode: 'number' }),
-        diskFreeBytes: bigint('disk_free_bytes', { mode: 'number' }),
-        memTotalBytes: bigint('mem_total_bytes', { mode: 'number' }),
-        memFreeBytes: bigint('mem_free_bytes', { mode: 'number' }),
-        cpuLoad: real('cpu_load'),
-        connectedClients: integer('connected_clients'),
-        extra: jsonb('extra').$type<Record<string, unknown>>(),
+        boxId: text('box_id'),
+        records: integer('records').notNull(),
+        accepted: integer('accepted').notNull(),
+        // Status of the box's most recent sync run, from its history.
+        lastRunStatus: text('last_run_status'),
+        ip: text('ip'),
     },
-    t => [index('device_heartbeats_device_received_idx').on(t.deviceId, t.receivedAt)],
+    t => [index('device_checkins_device_received_idx').on(t.deviceId, t.receivedAt)],
 );
 
-// What content each box currently has installed (replaced wholesale on each report).
-export const deviceInventory = pgTable(
-    'device_inventory',
+/**
+ * Records pushed by boxes from their sync outbox (somabox-lms, migration 0014). Append-only and
+ * keyed by the record's own syncId, so a batch sent twice stores nothing twice. The current
+ * state of a box entity is its latest record by entity_sync_id.
+ */
+export const boxRecords = pgTable(
+    'box_records',
     {
+        syncId: uuid('sync_id').primaryKey(),
         deviceId: uuid('device_id')
             .notNull()
             .references(() => devices.id, { onDelete: 'cascade' }),
-        collection: collectionEnum('collection').notNull(),
-        path: text('path').notNull(),
-        contentItemId: bigint('content_item_id', { mode: 'number' }).references(() => contentItems.id, {
-            onDelete: 'set null',
-        }),
-        sha256: text('sha256'),
-        size: bigint('size', { mode: 'number' }),
-        reportedAt: timestamp('reported_at', { withTimezone: true }).notNull().defaultNow(),
-    },
-    t => [
-        primaryKey({ columns: [t.deviceId, t.collection, t.path] }),
-        index('device_inventory_item_idx').on(t.contentItemId),
-    ],
-);
-
-export const usageEvents = pgTable(
-    'usage_events',
-    {
-        id: bigserial('id', { mode: 'number' }).primaryKey(),
-        deviceId: uuid('device_id')
-            .notNull()
-            .references(() => devices.id, { onDelete: 'cascade' }),
-        // Generated on the device; makes retries idempotent.
-        clientEventId: text('client_event_id').notNull(),
-        type: text('type').notNull(),
-        contentItemId: bigint('content_item_id', { mode: 'number' }).references(() => contentItems.id, {
-            onDelete: 'set null',
-        }),
-        collection: collectionEnum('collection'),
-        path: text('path'),
-        // Anonymous learner/session reference from the device, if any.
-        learnerRef: text('learner_ref'),
-        sessionRef: text('session_ref'),
-        durationSeconds: integer('duration_seconds'),
-        progress: real('progress'),
+        boxId: text('box_id'),
+        // Box table name: usage_events, courses, enrollments, quiz_attempts, users, ...
+        entity: text('entity').notNull(),
+        op: text('op').notNull(),
+        entitySyncId: uuid('entity_sync_id'),
         occurredAt: timestamp('occurred_at', { withTimezone: true }).notNull(),
         receivedAt: timestamp('received_at', { withTimezone: true }).notNull().defaultNow(),
-        extra: jsonb('extra').$type<Record<string, unknown>>(),
+        data: jsonb('data').$type<Record<string, unknown>>().notNull(),
     },
     t => [
-        uniqueIndex('usage_events_device_client_uq').on(t.deviceId, t.clientEventId),
-        index('usage_events_occurred_idx').on(t.occurredAt),
-        index('usage_events_item_idx').on(t.contentItemId, t.occurredAt),
-        index('usage_events_device_idx').on(t.deviceId, t.occurredAt),
+        index('box_records_entity_occurred_idx').on(t.entity, t.occurredAt),
+        index('box_records_device_entity_idx').on(t.deviceId, t.entity, t.occurredAt),
+        index('box_records_entity_sync_idx').on(t.entity, t.entitySyncId, t.occurredAt),
     ],
 );
 

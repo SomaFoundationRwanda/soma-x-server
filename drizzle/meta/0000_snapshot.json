@@ -1,9 +1,167 @@
 {
-  "id": "3c765ab5-2e92-4575-9f9a-f67d4b7a212f",
+  "id": "b7e02c6b-a1d9-4bea-b133-ecb73b08a801",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
+    "public.box_records": {
+      "name": "box_records",
+      "schema": "",
+      "columns": {
+        "sync_id": {
+          "name": "sync_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "device_id": {
+          "name": "device_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "box_id": {
+          "name": "box_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "entity": {
+          "name": "entity",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "op": {
+          "name": "op",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "entity_sync_id": {
+          "name": "entity_sync_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "occurred_at": {
+          "name": "occurred_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "received_at": {
+          "name": "received_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "data": {
+          "name": "data",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "box_records_entity_occurred_idx": {
+          "name": "box_records_entity_occurred_idx",
+          "columns": [
+            {
+              "expression": "entity",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "occurred_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "box_records_device_entity_idx": {
+          "name": "box_records_device_entity_idx",
+          "columns": [
+            {
+              "expression": "device_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "entity",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "occurred_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "box_records_entity_sync_idx": {
+          "name": "box_records_entity_sync_idx",
+          "columns": [
+            {
+              "expression": "entity",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "entity_sync_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "occurred_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "box_records_device_id_devices_id_fk": {
+          "name": "box_records_device_id_devices_id_fk",
+          "tableFrom": "box_records",
+          "tableTo": "devices",
+          "columnsFrom": [
+            "device_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
     "public.content_items": {
       "name": "content_items",
       "schema": "",
@@ -201,8 +359,8 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.device_heartbeats": {
-      "name": "device_heartbeats",
+    "public.device_checkins": {
+      "name": "device_checkins",
       "schema": "",
       "columns": {
         "id": {
@@ -224,70 +382,40 @@
           "notNull": true,
           "default": "now()"
         },
-        "reported_at": {
-          "name": "reported_at",
-          "type": "timestamp with time zone",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "software_version": {
-          "name": "software_version",
+        "box_id": {
+          "name": "box_id",
           "type": "text",
           "primaryKey": false,
           "notNull": false
         },
-        "uptime_seconds": {
-          "name": "uptime_seconds",
+        "records": {
+          "name": "records",
           "type": "integer",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
-        "disk_total_bytes": {
-          "name": "disk_total_bytes",
-          "type": "bigint",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "disk_free_bytes": {
-          "name": "disk_free_bytes",
-          "type": "bigint",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "mem_total_bytes": {
-          "name": "mem_total_bytes",
-          "type": "bigint",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "mem_free_bytes": {
-          "name": "mem_free_bytes",
-          "type": "bigint",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "cpu_load": {
-          "name": "cpu_load",
-          "type": "real",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "connected_clients": {
-          "name": "connected_clients",
+        "accepted": {
+          "name": "accepted",
           "type": "integer",
           "primaryKey": false,
+          "notNull": true
+        },
+        "last_run_status": {
+          "name": "last_run_status",
+          "type": "text",
+          "primaryKey": false,
           "notNull": false
         },
-        "extra": {
-          "name": "extra",
-          "type": "jsonb",
+        "ip": {
+          "name": "ip",
+          "type": "text",
           "primaryKey": false,
           "notNull": false
         }
       },
       "indexes": {
-        "device_heartbeats_device_received_idx": {
-          "name": "device_heartbeats_device_received_idx",
+        "device_checkins_device_received_idx": {
+          "name": "device_checkins_device_received_idx",
           "columns": [
             {
               "expression": "device_id",
@@ -309,9 +437,9 @@
         }
       },
       "foreignKeys": {
-        "device_heartbeats_device_id_devices_id_fk": {
-          "name": "device_heartbeats_device_id_devices_id_fk",
-          "tableFrom": "device_heartbeats",
+        "device_checkins_device_id_devices_id_fk": {
+          "name": "device_checkins_device_id_devices_id_fk",
+          "tableFrom": "device_checkins",
           "tableTo": "devices",
           "columnsFrom": [
             "device_id"
@@ -324,115 +452,6 @@
         }
       },
       "compositePrimaryKeys": {},
-      "uniqueConstraints": {},
-      "policies": {},
-      "checkConstraints": {},
-      "isRLSEnabled": false
-    },
-    "public.device_inventory": {
-      "name": "device_inventory",
-      "schema": "",
-      "columns": {
-        "device_id": {
-          "name": "device_id",
-          "type": "uuid",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "collection": {
-          "name": "collection",
-          "type": "collection",
-          "typeSchema": "public",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "path": {
-          "name": "path",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "content_item_id": {
-          "name": "content_item_id",
-          "type": "bigint",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "sha256": {
-          "name": "sha256",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "size": {
-          "name": "size",
-          "type": "bigint",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "reported_at": {
-          "name": "reported_at",
-          "type": "timestamp with time zone",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "now()"
-        }
-      },
-      "indexes": {
-        "device_inventory_item_idx": {
-          "name": "device_inventory_item_idx",
-          "columns": [
-            {
-              "expression": "content_item_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        }
-      },
-      "foreignKeys": {
-        "device_inventory_device_id_devices_id_fk": {
-          "name": "device_inventory_device_id_devices_id_fk",
-          "tableFrom": "device_inventory",
-          "tableTo": "devices",
-          "columnsFrom": [
-            "device_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "cascade",
-          "onUpdate": "no action"
-        },
-        "device_inventory_content_item_id_content_items_id_fk": {
-          "name": "device_inventory_content_item_id_content_items_id_fk",
-          "tableFrom": "device_inventory",
-          "tableTo": "content_items",
-          "columnsFrom": [
-            "content_item_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "set null",
-          "onUpdate": "no action"
-        }
-      },
-      "compositePrimaryKeys": {
-        "device_inventory_device_id_collection_path_pk": {
-          "name": "device_inventory_device_id_collection_path_pk",
-          "columns": [
-            "device_id",
-            "collection",
-            "path"
-          ]
-        }
-      },
       "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},
@@ -493,9 +512,27 @@
           "notNull": true,
           "default": "'active'"
         },
-        "software_version": {
-          "name": "software_version",
+        "box_id": {
+          "name": "box_id",
           "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hardware": {
+          "name": "hardware",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "school": {
+          "name": "school",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sync_history": {
+          "name": "sync_history",
+          "type": "jsonb",
           "primaryKey": false,
           "notNull": false
         },
@@ -511,21 +548,9 @@
           "primaryKey": false,
           "notNull": false
         },
-        "last_sync_cursor": {
-          "name": "last_sync_cursor",
-          "type": "bigint",
-          "primaryKey": false,
-          "notNull": false
-        },
         "last_sync_at": {
           "name": "last_sync_at",
           "type": "timestamp with time zone",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "latest_health": {
-          "name": "latest_health",
-          "type": "jsonb",
           "primaryKey": false,
           "notNull": false
         },
@@ -544,7 +569,23 @@
           "default": "now()"
         }
       },
-      "indexes": {},
+      "indexes": {
+        "devices_box_id_idx": {
+          "name": "devices_box_id_idx",
+          "columns": [
+            {
+              "expression": "box_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
@@ -563,211 +604,6 @@
           ]
         }
       },
-      "policies": {},
-      "checkConstraints": {},
-      "isRLSEnabled": false
-    },
-    "public.usage_events": {
-      "name": "usage_events",
-      "schema": "",
-      "columns": {
-        "id": {
-          "name": "id",
-          "type": "bigserial",
-          "primaryKey": true,
-          "notNull": true
-        },
-        "device_id": {
-          "name": "device_id",
-          "type": "uuid",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "client_event_id": {
-          "name": "client_event_id",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "type": {
-          "name": "type",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "content_item_id": {
-          "name": "content_item_id",
-          "type": "bigint",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "collection": {
-          "name": "collection",
-          "type": "collection",
-          "typeSchema": "public",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "path": {
-          "name": "path",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "learner_ref": {
-          "name": "learner_ref",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "session_ref": {
-          "name": "session_ref",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "duration_seconds": {
-          "name": "duration_seconds",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "progress": {
-          "name": "progress",
-          "type": "real",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "occurred_at": {
-          "name": "occurred_at",
-          "type": "timestamp with time zone",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "received_at": {
-          "name": "received_at",
-          "type": "timestamp with time zone",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "now()"
-        },
-        "extra": {
-          "name": "extra",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": false
-        }
-      },
-      "indexes": {
-        "usage_events_device_client_uq": {
-          "name": "usage_events_device_client_uq",
-          "columns": [
-            {
-              "expression": "device_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "client_event_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": true,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "usage_events_occurred_idx": {
-          "name": "usage_events_occurred_idx",
-          "columns": [
-            {
-              "expression": "occurred_at",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "usage_events_item_idx": {
-          "name": "usage_events_item_idx",
-          "columns": [
-            {
-              "expression": "content_item_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "occurred_at",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "usage_events_device_idx": {
-          "name": "usage_events_device_idx",
-          "columns": [
-            {
-              "expression": "device_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "occurred_at",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        }
-      },
-      "foreignKeys": {
-        "usage_events_device_id_devices_id_fk": {
-          "name": "usage_events_device_id_devices_id_fk",
-          "tableFrom": "usage_events",
-          "tableTo": "devices",
-          "columnsFrom": [
-            "device_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "cascade",
-          "onUpdate": "no action"
-        },
-        "usage_events_content_item_id_content_items_id_fk": {
-          "name": "usage_events_content_item_id_content_items_id_fk",
-          "tableFrom": "usage_events",
-          "tableTo": "content_items",
-          "columnsFrom": [
-            "content_item_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "set null",
-          "onUpdate": "no action"
-        }
-      },
-      "compositePrimaryKeys": {},
-      "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},
       "isRLSEnabled": false

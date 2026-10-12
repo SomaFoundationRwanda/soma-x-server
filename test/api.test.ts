@@ -1,3 +1,4 @@
+import { randomUUID } from 'node:crypto';
 import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
@@ -248,77 +249,140 @@ describe('device sync', () => {
     });
 });
 
-describe('device push', () => {
-    it('records heartbeats and inventory, flagging outdated copies', async () => {
-        const hb = await dev(request(app).post('/api/v1/devices/me/heartbeat')).send({
-            softwareVersion: '1.4.0',
-            uptimeSeconds: 3600,
-            disk: { totalBytes: 500e9, freeBytes: 120e9 },
-            connectedClients: 14,
-            syncCursor: 7,
-        });
-        expect(hb.status).toBe(204);
+describe('box sync receiver (somabox-lms outbox)', () => {
+    const BOX_ID = randomUUID();
+    const device = {
+        serialNumber: 'PF3X9K2A',
+        machineId: 'abc123',
+        macAddresses: [{ interface: 'eth0', mac: '00:11:22:33:44:55', physical: true }],
+        hostname: 'somabox',
+        model: 'ThinkCentre M720q',
+        source: 'script',
+    };
+    const school = { name: 'GS Kigali', code: 'GSK', province: 'Kigali', district: 'Gasabo', isRural: false };
+    const history = [{ startedAt: '2026-10-12T08:00:00Z', finishedAt: '2026-10-12T08:00:01Z', status: 'ok', details: { sent: 3, pending: 0 } }];
+    const rec = (entity: string, op: string, entitySyncId: string, data: Record<string, unknown>, occurredAt = new Date().toISOString()) => ({
+        syncId: randomUUID(),
+        boxId: BOX_ID,
+        entity,
+        op,
+        entitySyncId,
+        occurredAt,
+        data: { ...data, sync_id: entitySyncId },
+    });
+    const post = (body: unknown) => dev(request(app).post('/api/v1/box-sync')).send(body as object);
 
-        const items = (await admin(request(app).get('/api/v1/admin/content'))).body.items;
-        const unit10 = items.find((i: any) => i.path.endsWith('unit-10.txt'));
-        const book = items.find((i: any) => i.collection === 'library');
-        const inv = await dev(request(app).put('/api/v1/devices/me/inventory')).send({
-            items: [
-                { collection: 'curriculum', path: unit10.path, sha256: 'a'.repeat(64) },
-                { collection: 'library', contentId: book.id, sha256: book.sha256 },
-                { collection: 'curriculum', path: 'local-only/thing.mp4' },
+    const learner1 = randomUUID();
+    const learner2 = randomUUID();
+    const course = randomUUID();
+
+    it('treats an empty batch as a heartbeat and learns the box identity and school', async () => {
+        const res = await post({ boxId: BOX_ID, device, school, history, records: [] });
+        expect(res.status).toBe(200);
+        expect(res.body).toEqual({ accepted: 0, duplicates: 0, rejected: 0 });
+
+        const me = await dev(request(app).get('/api/v1/devices/me'));
+        expect(me.body).toMatchObject({ boxId: BOX_ID, serial: 'SBX-1', school, hardware: device });
+        expect(me.body.syncHistory[0].status).toBe('ok');
+    });
+
+    it('stores records once by syncId, so a re-sent batch adds nothing', async () => {
+        const batch = {
+            boxId: BOX_ID,
+            device,
+            school,
+            history,
+            records: [
+                rec('users', 'snapshot', learner1, { id: 1, role: 'scholar', grade_level: 'P4', password_hash: 'x' }),
+                rec('users', 'insert', learner2, { id: 2, role: 'scholar', grade_level: 'P5' }),
+                rec('users', 'insert', randomUUID(), { id: 3, role: 'teacher' }),
+                rec('courses', 'insert', course, { id: 'C001', title: 'Maths P4', created_by_teacher_person: randomUUID() }),
             ],
+        };
+        expect((await post(batch)).body).toEqual({ accepted: 4, duplicates: 0, rejected: 0 });
+        expect((await post(batch)).body).toEqual({ accepted: 0, duplicates: 4, rejected: 0 });
+
+        const raw = await admin(request(app).get('/api/v1/admin/records').query({ entity: 'users' }));
+        expect(raw.body.records).toHaveLength(3);
+        expect(raw.body.records.every((r: any) => !('password_hash' in r.data))).toBe(true);
+    });
+
+    it('drops only malformed records instead of stalling the box', async () => {
+        const res = await post({
+            boxId: BOX_ID,
+            records: [{ syncId: 'not-a-uuid', entity: 'users', op: 'insert' }, rec('courses', 'update', course, { id: 'C001', title: 'Mathematics P4' })],
         });
-        expect(inv.body).toEqual({ stored: 3, unknown: 1, outdated: 1 });
+        expect(res.body).toEqual({ accepted: 1, duplicates: 0, rejected: 1 });
+    });
+
+    it('reports current state: updates replace, deletes remove', async () => {
+        await post({ boxId: BOX_ID, records: [rec('users', 'delete', learner2, { id: 2, role: 'scholar' })] });
+
+        const courses = await admin(request(app).get('/api/v1/admin/records/current').query({ entity: 'courses' }));
+        expect(courses.body).toHaveLength(1);
+        expect(courses.body[0].data.title).toBe('Mathematics P4');
 
         const report = await admin(request(app).get('/api/v1/admin/stats/devices'));
         expect(report.body.find((d: any) => d.id === deviceId)).toMatchObject({
-            software_version: '1.4.0',
-            installed_items: 3,
-            outdated_items: 1,
-            disk_free_bytes: 120e9,
+            school_name: 'GS Kigali',
+            district: 'Gasabo',
+            model: 'ThinkCentre M720q',
+            last_run_status: 'ok',
+            pending_records: 0,
+            learners: 1,
+            teachers: 1,
+            courses: 1,
         });
+        const schools = await admin(request(app).get('/api/v1/admin/stats/schools'));
+        expect(schools.body).toEqual([expect.objectContaining({ school_name: 'GS Kigali', boxes: 1, learners: 1, teachers: 1 })]);
     });
 
-    it('accepts usage events idempotently and corrects a wrong device clock', async () => {
+    it('aggregates usage events by type, course, district and catalogue item', async () => {
         const book = (await admin(request(app).get('/api/v1/admin/content').query({ collection: 'library' }))).body.items[0];
-        const now = Date.now();
-        const batch = {
-            events: [
-                { id: 'e1', type: 'view', occurredAt: new Date(now - 60_000).toISOString(), contentId: book.id, learnerRef: 'L1', durationSeconds: 120 },
-                { id: 'e2', type: 'view', occurredAt: new Date(now - 30_000).toISOString(), contentId: book.id, learnerRef: 'L2', durationSeconds: 60 },
-                { id: 'e3', type: 'video.complete', occurredAt: new Date(now).toISOString(), collection: 'curriculum', path: 'primary-4/maths/unit-10.txt', progress: 1 },
-                { id: 'e4', type: 'view', occurredAt: new Date(now).toISOString(), contentId: 999999 },
-            ],
+        const ev = (type: string, data: Record<string, unknown>, extra: Record<string, unknown> = {}) => {
+            const id = randomUUID();
+            return rec('usage_events', 'insert', id, { event_type: type, role: 'scholar', created_at: new Date().toISOString(), data, ...extra });
         };
-        const first = await dev(request(app).post('/api/v1/devices/me/events')).send(batch);
-        expect(first.body).toMatchObject({ accepted: 4, duplicates: 0, clockSkewMs: 0 });
-        const retry = await dev(request(app).post('/api/v1/devices/me/events')).send(batch);
-        expect(retry.body).toMatchObject({ accepted: 0, duplicates: 4 });
-
-        // Box thinks it is 2001; its events should land at the real time.
-        const fakeNow = new Date('2001-01-01T00:00:00Z').getTime();
-        const skewed = await dev(request(app).post('/api/v1/devices/me/events')).send({
-            sentAt: new Date(fakeNow).toISOString(),
-            events: [{ id: 'e5', type: 'view', occurredAt: new Date(fakeNow - 1000).toISOString(), contentId: book.id }],
+        await post({
+            boxId: BOX_ID,
+            records: [
+                ev('course_opened', {}, { user_id: 1, course_id: 'C001' }),
+                ev('course_opened', {}, { user_id: 3, course_id: 'C001' }),
+                ev('item_opened', {}, { user_id: 1, course_id: 'C001' }),
+                ev('content_opened', { source: 'library', cloudContentId: book.id, title: book.title }, { user_id: 1 }),
+                ev('content_opened', { source: 'library', cloudContentId: book.id, title: book.title }, { user_id: 3 }),
+                ev('content_opened', { source: 'rwandan-education', path: 'science/cells.mp4', title: 'Cells' }, { user_id: 1 }),
+            ],
         });
-        expect(Math.abs(skewed.body.clockSkewMs - (now - fakeNow))).toBeLessThan(10_000);
 
-        const usage = await admin(request(app).get('/api/v1/admin/stats/usage').query({ groupBy: 'content', type: 'view' }));
-        expect(usage.body.rows[0]).toMatchObject({ label: book.title, events: 3, unique_learners: 2, total_duration_seconds: 180 });
+        const byType = await admin(request(app).get('/api/v1/admin/stats/usage').query({ groupBy: 'type' }));
+        expect(byType.body.rows).toEqual(
+            expect.arrayContaining([
+                expect.objectContaining({ key: 'course_opened', events: 2, unique_people: 2 }),
+                expect.objectContaining({ key: 'content_opened', events: 3, unique_people: 2 }),
+            ]),
+        );
+        const byCourse = await admin(request(app).get('/api/v1/admin/stats/usage').query({ groupBy: 'course' }));
+        expect(byCourse.body.rows).toEqual([expect.objectContaining({ label: 'Mathematics P4', events: 3, unique_people: 2 })]);
 
-        const byCat = await admin(request(app).get('/api/v1/admin/stats/usage').query({ groupBy: 'category' }));
-        expect(byCat.body.rows.map((r: any) => r.key).sort()).toEqual(['biology', 'science']);
+        const byDistrict = await admin(request(app).get('/api/v1/admin/stats/usage').query({ groupBy: 'district' }));
+        expect(byDistrict.body.rows).toEqual([expect.objectContaining({ key: 'Gasabo', events: 6, unique_devices: 1 })]);
+
+        const byContent = await admin(request(app).get('/api/v1/admin/stats/usage').query({ groupBy: 'content' }));
+        expect(byContent.body.rows).toEqual([
+            expect.objectContaining({ key: String(book.id), label: book.title, events: 2 }),
+            expect.objectContaining({ label: 'Cells', events: 1 }),
+        ]);
+        const reach = await admin(request(app).get(`/api/v1/admin/stats/content/${book.id}`));
+        expect(reach.body.usage).toEqual([expect.objectContaining({ type: 'content_opened', events: 2, unique_people: 2 })]);
 
         const overview = await admin(request(app).get('/api/v1/admin/stats/overview'));
-        expect(overview.status).toBe(200);
-        expect(overview.body.devices).toMatchObject({ total: 2, active: 1 });
+        expect(overview.body.devices).toMatchObject({ total: 2, active: 1, schools: 1 });
+        expect(overview.body.people).toEqual(expect.arrayContaining([{ role: 'scholar', people: 1 }, { role: 'teacher', people: 1 }]));
     });
 
-    it('validates event payloads', async () => {
-        const bad = await dev(request(app).post('/api/v1/devices/me/events')).send({ events: [{ id: 'x', type: 'View!', occurredAt: 'yesterday' }] });
-        expect(bad.status).toBe(400);
-        expect(bad.body.issues.length).toBeGreaterThan(0);
+    it('needs the box key', async () => {
+        expect((await request(app).post('/api/v1/box-sync').send({ records: [] })).status).toBe(401);
     });
 });
 
