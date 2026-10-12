@@ -183,7 +183,7 @@ export function learnersRouter(db: Db): Router {
     router.get('/demographics', async (req, res) => {
         const f = filters.parse(req.query);
         const base = learnersCte(f);
-        const groups = ['gender', 'rural', 'disability', 'language', 'grade', 'district'] as const;
+        const groups = ['gender', 'rural', 'disability', 'language', 'grade', 'district', 'school', 'box'] as const;
         const [totals, ...breakdowns] = await Promise.all([
             db.execute(sql`
                 WITH ${base}
@@ -196,12 +196,22 @@ export function learnersRouter(db: Db): Router {
                        count(DISTINCT school_name)::int AS schools
                 FROM summary`),
             ...groups.map(g => {
-                // Districts: the learner's own answer, else their school's.
-                const key = g === 'district' ? sql`coalesce(district, school_district)` : sql.raw(g);
+                // Districts: the learner's own answer, else their school's. Boxes are keyed by id.
+                const key =
+                    g === 'district' ? sql`coalesce(district, school_district)`
+                    : g === 'school' ? sql`school_name`
+                    : g === 'box' ? sql`device_id::text`
+                    : sql.raw(g);
+                const label = g === 'box' ? sql`max(device_name)` : sql`NULL::text`;
+                // Each group also carries the counts behind its own shares (girls, rural, disability),
+                // so e.g. the share of girls per district can be shown.
                 return db.execute(sql`
                     WITH ${base}
-                    SELECT ${key} AS key, count(*)::int AS learners,
-                           round(avg(quiz_avg)::numeric, 1)::float AS quiz_avg, round(avg(mastery_avg)::numeric, 1)::float AS mastery_avg
+                    SELECT ${key} AS key, ${label} AS label, count(*)::int AS learners,
+                           round(avg(quiz_avg)::numeric, 1)::float AS quiz_avg, round(avg(mastery_avg)::numeric, 1)::float AS mastery_avg,
+                           count(*) FILTER (WHERE gender = 'female')::int AS girls, count(gender)::int AS gender_known,
+                           count(*) FILTER (WHERE rural = 'rural')::int AS rural, count(rural)::int AS rural_known,
+                           count(*) FILTER (WHERE disability <> 'none')::int AS disabled, count(disability)::int AS disability_known
                     FROM summary GROUP BY 1 ORDER BY learners DESC`);
             }),
         ]);
@@ -209,7 +219,16 @@ export function learnersRouter(db: Db): Router {
         const t = totals.rows[0] as { learners: number } & Record<string, unknown>;
         const out: Record<string, unknown> = { ...t };
         groups.forEach((g, i) => {
-            const rows = breakdowns[i]!.rows as { key: string | null; learners: number; quiz_avg: number | null; mastery_avg: number | null }[];
+            type Group = { key: string | null; learners: number } & Record<string, unknown>;
+            const rows: Group[] = (breakdowns[i]!.rows as Record<string, any>[]).map(({ label, girls, gender_known, rural, rural_known, disabled, disability_known, ...r }) => ({
+                key: r.key,
+                learners: r.learners,
+                ...r,
+                ...(g === 'box' ? { label } : {}),
+                girlsPct: pct(girls, gender_known),
+                ruralPct: pct(rural, rural_known),
+                disabilityPct: pct(disabled, disability_known),
+            }));
             const knownTotal = rows.filter(r => r.key !== null).reduce((n, r) => n + r.learners, 0);
             out[g] = {
                 known: knownTotal,

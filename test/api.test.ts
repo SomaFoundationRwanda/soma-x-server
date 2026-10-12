@@ -444,13 +444,14 @@ describe('box sync receiver (somabox-lms outbox)', () => {
         expect(stats.headline).toEqual({ girlsPct: 66.7, ruralPct: 50, disabilityPct: 50, profilesCompletePct: 50 });
         expect(stats.gender).toMatchObject({ known: 3, unknown: 1 });
         expect(stats.gender.groups).toEqual(expect.arrayContaining([
-            { key: 'female', learners: 2, quiz_avg: 85, mastery_avg: 80, share: 66.7 },
-            { key: 'male', learners: 1, quiz_avg: 50, mastery_avg: null, share: 33.3 },
+            expect.objectContaining({ key: 'female', learners: 2, quiz_avg: 85, mastery_avg: 80, share: 66.7 }),
+            expect.objectContaining({ key: 'male', learners: 1, quiz_avg: 50, mastery_avg: null, share: 33.3 }),
         ]));
         expect(stats.district.groups).toEqual(expect.arrayContaining([
-            expect.objectContaining({ key: 'Gasabo', learners: 3 }), // their school's district
-            expect.objectContaining({ key: 'Bugesera', learners: 1 }),
+            expect.objectContaining({ key: 'Gasabo', learners: 3, girlsPct: 50, ruralPct: 0 }), // their school's district
+            expect.objectContaining({ key: 'Bugesera', learners: 1, girlsPct: 100, ruralPct: 100, disabilityPct: 100 }),
         ]));
+        expect(stats.box.groups).toEqual([expect.objectContaining({ key: deviceId, label: 'Test box', learners: 4, girlsPct: 66.7 })]);
         expect((await admin(request(app).get('/api/v1/admin/stats/demographics').query({ gender: 'female' }))).body.learners).toBe(2);
     });
 
