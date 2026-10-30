@@ -157,6 +157,25 @@ describe('legacy endpoints (deployed SomaBoxes)', () => {
         expect(file.status).toBe(200);
         expect(Number(file.headers['content-length'])).toBe(up.body.item.size);
     });
+
+    it('lists library PDFs only for boxes that ask with ?formats=epub,pdf', async () => {
+        const up = await admin(request(app).post('/api/v1/admin/content'))
+            .field('collection', 'library')
+            .attach('file', await makePdf(2), 'atlas.pdf');
+        expect(up.status).toBe(201);
+        const id = String(up.body.item.id);
+
+        const old = await request(app).get('/library-metadata');
+        expect(old.body.some((b: any) => b.id === id)).toBe(false);
+
+        const meta = await request(app).get('/library-metadata?formats=epub,pdf');
+        expect(meta.body).toContainEqual(expect.objectContaining({ id, book_name: 'Atlas', extension: 'pdf' }));
+        expect(meta.body.every((b: any) => ['epub', 'pdf'].includes(b.extension))).toBe(true);
+
+        const file = await request(app).get(`/content/library/${id}.pdf`).buffer(true);
+        expect(file.status).toBe(200);
+        expect(Number(file.headers['content-length'])).toBe(up.body.item.size);
+    });
 });
 
 describe('admin content API', () => {

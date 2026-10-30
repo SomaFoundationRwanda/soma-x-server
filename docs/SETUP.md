@@ -147,7 +147,7 @@ There are two ways to add files, and neither needs a command afterwards:
   Use `collection=library` for books, adding `-F categories=science,biology` and `-F title=...` if wanted.
 
 Check what is indexed: `curl -s https://cloud.somaglobaltalent.org/metadata` (curriculum) and
-`/library-metadata` (books). Existing boxes list only EPUB books, because they store every book as `.epub`.
+`/library-metadata?formats=epub,pdf` (books). Boxes running older software list only EPUB books, because they store every book as `.epub`; update the box's `soma-x-backend` to see PDFs.
 
 ## 8. Register each box
 

@@ -68,9 +68,9 @@ changes. To revoke a token, set its `revoked_at` in `api_tokens`.
 | | |
 |---|---|
 | `GET /metadata` | Curriculum tree `[{type, name, path, size, children}]` (now also has `id`, `sha256`, `version`) |
-| `GET /library-metadata` | `[{id, book_name, categories}]`. EPUBs only, because old boxes save every book as `<id>.epub` |
+| `GET /library-metadata` | `[{id, book_name, categories, extension}]`. EPUBs only by default, because old boxes save every book as `<id>.epub`; `?formats=epub,pdf` adds PDFs |
 | `GET/HEAD /content/<path>` | Curriculum file |
-| `GET /content/library/<id>.epub` | Library book |
+| `GET /content/library/<id>.<ext>` | Library book (EPUB or PDF) |
 
 ### Boxes (`/api/v1`, the box's key)
 

@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import { and, asc, eq, isNull } from 'drizzle-orm';
+import { and, asc, eq, inArray, isNull } from 'drizzle-orm';
 import type { Db } from '../db/client.js';
 import { contentItems, type ContentItem } from '../db/schema.js';
 import { toAbsPath, type CollectionRoots } from '../ingest/paths.js';
@@ -56,6 +56,15 @@ export function buildTree(items: Pick<ContentItem, 'id' | 'path' | 'size' | 'sha
     return root.children;
 }
 
+const LIBRARY_FORMATS = ['epub', 'pdf'];
+
+/** "epub,pdf" -> ['epub', 'pdf']; unknown formats are dropped, nothing valid means EPUB only. */
+function libraryFormats(raw: unknown): string[] {
+    const asked = typeof raw === 'string' ? raw.split(',').map(f => f.trim().toLowerCase()) : [];
+    const formats = LIBRARY_FORMATS.filter(f => asked.includes(f));
+    return formats.length ? formats : ['epub'];
+}
+
 export function legacyRouter(db: Db, roots: CollectionRoots): Router {
     const router = Router();
     const live = (collection: 'curriculum' | 'library') =>
@@ -77,14 +86,15 @@ export function legacyRouter(db: Db, roots: CollectionRoots): Router {
         res.json(buildTree(items));
     });
 
-    // Device: GET /library-metadata -> [{ id, book_name, categories }].
-    // Old devices always save books as "<id>.epub", so only EPUBs are listed here;
-    // PDFs in the library are available through /api/v1/sync.
-    router.get('/library-metadata', async (_req, res) => {
+    // Device: GET /library-metadata -> [{ id, book_name, categories, extension }].
+    // Old devices always save books as "<id>.epub", so only EPUBs are listed by
+    // default. Boxes that save by extension ask for more: ?formats=epub,pdf
+    router.get('/library-metadata', async (req, res) => {
+        const formats = libraryFormats(req.query.formats);
         const books = await db
             .select()
             .from(contentItems)
-            .where(and(live('library'), eq(contentItems.extension, 'epub')))
+            .where(and(live('library'), inArray(contentItems.extension, formats)))
             .orderBy(asc(contentItems.title));
         res.json(
             books.map(b => ({
@@ -92,6 +102,7 @@ export function legacyRouter(db: Db, roots: CollectionRoots): Router {
                 book_name: b.title,
                 categories: b.categories.join(','),
                 author: b.author,
+                extension: b.extension,
                 size: b.size,
                 sha256: b.sha256,
                 version: b.version,
@@ -99,7 +110,7 @@ export function legacyRouter(db: Db, roots: CollectionRoots): Router {
         );
     });
 
-    // Device: GET /content/library/<id>.epub
+    // Device: GET /content/library/<id>.<ext> (the extension is not checked)
     router.get('/content/library/:file', async (req, res, next) => {
         const id = Number(req.params.file.replace(/\.[a-z0-9]+$/i, ''));
         if (!Number.isSafeInteger(id) || id <= 0) return next();
